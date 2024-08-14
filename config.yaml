@@ -49,12 +49,12 @@ params:
   profileMode:
     enabled: true
     title: "Anurag singh Chaudhary"
-    subtitle: Hi 👋 I'm Anurag, Let's connect!
+    subtitle: Hi 👋 I'm Anurag, I work in Data Science 🧑🏻‍💻 Let's connect!
 
  
     imageUrl: "home/Anurag_profile_pic_1.png"
-    imageWidth: 220
-    imageHeight: 220
+    imageWidth: 200
+    imageHeight: 200
     # buttons:
     #   - name: Resume
     #     url: ""

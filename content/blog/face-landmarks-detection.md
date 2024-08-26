@@ -1,10 +1,10 @@
-<!-- ---
-title: "Face Landmarks Detection using CNN"
-description: "Can computers really understand the human face?"
+---
+title: "Huggin - Agents"
+description: "Create agents that monitor and act on your behalf"
 dateString: May 2020
-draft: false
+draft: true
 tags: ["DL", "AI", "Python", "PyTorch"]
-weight: 104
+weight: 101
 cover:
     image: "/blog/face-landmarks-detection/cover.jpg"
     # caption: "A sample landmark detection on a photo by Ayo Ogunseinde taken from Unsplash"
@@ -17,6 +17,9 @@ Ever wondered how Instagram applies stunning filters to your face? The software 
 # Dataset
 
 In this tutorial, we will use the official [DLib Dataset](http://dlib.net/files/data/ibug_300W_large_face_landmark_dataset.tar.gz) which contains **6666 images of varying dimensions**. Additionally, *labels_ibug_300W_train.xml* (comes with the dataset) contains the coordinates of **68 landmarks for each face**. The script below will download the dataset and unzip it in Colab Notebook.
+
+<iframe src="https://anuragsinghchaudhary.github.io/d3_dag/" width="100%" height="600px" frameborder="0"></iframe>
+
 
 ```python
 if not os.path.exists('/content/ibug_300W_large_face_landmark_dataset'):
@@ -349,4 +352,4 @@ Here, you can see that the OpenCV Harr Cascade Classifier has detected multiple 
 If you made it till here, hats off to you! You just trained your very own neural network to detect face landmarks in any image. Try predicting face landmarks on your webcam feed!!
 
 # Colab Notebook
-The complete code can be found in the interactive [Colab Notebook](https://colab.research.google.com/drive/1TOw7W_WU4oltoGZfZ_0krpxmhdFR2gmb). -->
+The complete code can be found in the interactive [Colab Notebook](https://colab.research.google.com/drive/1TOw7W_WU4oltoGZfZ_0krpxmhdFR2gmb).

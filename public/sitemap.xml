@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/blog/data-mining-algorithms/</loc>
+  </url><url>
+    <loc>http://localhost:1313/blog/face-landmarks-detection/</loc>
+  </url><url>
     <loc>http://localhost:1313/projects/obsidian-publish-github-action/</loc>
   </url><url>
     <loc>http://localhost:1313/projects/kindle-to-notion/</loc>
@@ -27,20 +31,6 @@
     <loc>http://localhost:1313/experience/16bit/</loc>
   </url><url>
     <loc>http://localhost:1313/experience/buyerassist/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/aws-dva-certification/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/aws-saa-certification/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/face-dataset-compression/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/face-landmarks-detection/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/kindle-to-notion/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/machine-learning-visualized/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/pca-visualized/</loc>
   </url><url>
     <loc>http://localhost:1313/experience/origin-health/</loc>
   </url><url>
@@ -76,6 +66,10 @@
   </url><url>
     <loc>http://localhost:1313/tags/dagster/</loc>
   </url><url>
+    <loc>http://localhost:1313/tags/data-mining/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/deep-learning/</loc>
+  </url><url>
     <loc>http://localhost:1313/tags/dl/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/docker/</loc>
@@ -109,6 +103,8 @@
     <loc>http://localhost:1313/tags/llm/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/lstm/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/machine-learning/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/mkdocs/</loc>
   </url><url>

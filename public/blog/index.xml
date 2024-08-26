@@ -7,66 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>http://localhost:1313/blog/aws-dva-certification/</link>
+      <title>11 Essential Data Mining Algorithms</title>
+      <link>http://localhost:1313/blog/data-mining-algorithms/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/aws-dva-certification/</guid>
-      <description></description>
+      <guid>http://localhost:1313/blog/data-mining-algorithms/</guid>
+      <description>Most common Data Mining/ Machine Learning Algorithms</description>
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/blog/aws-saa-certification/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/aws-saa-certification/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/blog/face-dataset-compression/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/face-dataset-compression/</guid>
-      <description> </description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>Huggin - Agents</title>
       <link>http://localhost:1313/blog/face-landmarks-detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/blog/face-landmarks-detection/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/blog/kindle-to-notion/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/kindle-to-notion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/blog/machine-learning-visualized/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/machine-learning-visualized/</guid>
-      <description> </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/blog/pca-visualized/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/pca-visualized/</guid>
-      <description></description>
+      <description>Create agents that monitor and act on your behalf</description>
     </item>
     
   </channel>

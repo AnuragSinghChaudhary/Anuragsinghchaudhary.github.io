@@ -16,15 +16,6 @@
     </item>
     
     <item>
-      <title>Huggin - Agents</title>
-      <link>http://localhost:1313/blog/face-landmarks-detection/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/blog/face-landmarks-detection/</guid>
-      <description>Create agents that monitor and act on your behalf</description>
-    </item>
-    
-    <item>
       <title>Obsidian Publish using GitHub Action</title>
       <link>http://localhost:1313/projects/obsidian-publish-github-action/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

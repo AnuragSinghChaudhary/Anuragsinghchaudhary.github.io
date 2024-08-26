@@ -79,6 +79,7 @@ params:
     - name: "twitter"
       url: "https://x.com/Anurag_chdry"
 
+
   # text search
   fuseOpts:
     isCaseSensitive: false

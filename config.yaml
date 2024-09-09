@@ -59,7 +59,7 @@ params:
     #   - name: Resume
     #     url: "https://drive.google.com/file/d/1V0QT_pO-s1EpOvjM5cwjXhSN-S6NpN4u/view?usp=sharing"
     buttons:
-      - name: Looking for Consulation?
+      - name: Book a meeting!
         url: "https://topmate.io/embed/profile/anurag_chaudhary10"
 
   # List View

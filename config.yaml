@@ -55,9 +55,12 @@ params:
     imageUrl: "home/Anurag_profile_pic_1.png"
     imageWidth: 200
     imageHeight: 200
+    # buttons:
+    #   - name: Resume
+    #     url: "https://drive.google.com/file/d/1V0QT_pO-s1EpOvjM5cwjXhSN-S6NpN4u/view?usp=sharing"
     buttons:
-      - name: Resume
-        url: "https://drive.google.com/file/d/1V0QT_pO-s1EpOvjM5cwjXhSN-S6NpN4u/view?usp=sharing"
+      - name: Looking for Consulation?
+        url: "https://topmate.io/embed/profile/anurag_chaudhary10"
 
   # List View
   hideDescriptionInList: false
@@ -68,6 +71,10 @@ params:
     hiddenInSingle: false # hide on single page
 
   socialIcons:
+    - name: "cv"
+      url: "https://drive.google.com/file/d/16hYU1FqYJlCnsyEm0UsgQuYUBp_yXv1T/view?usp=sharing"
+    - name: "twitter"
+      url: "https://x.com/Anurag_chdry"
     - name: "email"
       url: "mailto:Anuragchaudahry004@gmail.com"
     - name: "linkedin"
@@ -76,8 +83,8 @@ params:
       url: "https://github.com/AnuragSinghChaudhary"
     - name: "youtube"
       url: "https://www.youtube.com/@anrag"
-    - name: "twitter"
-      url: "https://x.com/Anurag_chdry"
+    
+    
 
 
   # text search

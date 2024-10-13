@@ -2,7 +2,7 @@
 title: "11 Essential Data Mining Algorithms"
 description: "Most common Data Mining/ Machine Learning Algorithms"
 dateString: December 2017
-draft: false
+draft: true
 tags: ["Deep Learning", "AI", "Data Mining", "Machine Learning"]
 weight: 101
 # cover:

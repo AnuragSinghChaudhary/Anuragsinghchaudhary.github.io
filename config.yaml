@@ -48,9 +48,8 @@ params:
   # Home Page
   profileMode:
     enabled: true
-    title: "Anurag singh Chaudhary"
-    subtitle: Hi 👋 I'm Anurag, I work in Data Science 🧑🏻‍💻 Let's connect!
-
+    title: "Anurag Chaudhary"
+    subtitle: Hello, I am Anurag. I am passionate about blending data engineering and blockchain technology to solve complex problems. Currently, I am focused on a 100-day Blockchain challenge, diving deep into data engineering and exploring tools like Dune Analytics. I enjoy breaking down projects, like developing data connectors, into actionable steps to make them achievable. With a keen interest in learning, sharing knowledge, and collaborating on assignments, I aim to contribute meaningfully to the tech community.
  
     imageUrl: "home/Anurag_profile_pic_1.png"
     imageWidth: 200

@@ -48,7 +48,7 @@ params:
   # Home Page
   profileMode:
     enabled: true
-    title: ""
+    title: "A"
     subtitle: Hey, I’m Anurag! I build Data Pipelines for scalable AI-driven platforms for real-time data discovery. Outside of work, I love experimenting with LLMs to solve quirky problems. I hold Masters Degree in Data Engineering and currently based Paris 🇫🇷.
     imageUrl: "home/Anurag_profile_pic_2.png"
     imageWidth: 200

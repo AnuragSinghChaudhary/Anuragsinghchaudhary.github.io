@@ -1,6 +1,6 @@
 baseURL: "https://AnuragSinghChaudhary.github.io/"
 languageCode: en-us
-title: Anurag 
+title: Anurag Chaudhary
 theme: PaperMod
 
 menu:
@@ -48,8 +48,8 @@ params:
   # Home Page
   profileMode:
     enabled: true
-    title: "Anurag Chaudhary"
-    subtitle: Hello, I am Anurag. I work somewhere between Data Science & Data Engineering 🚀. 
+    title: ""
+    subtitle: Hey, I’m Anurag! I build Data Pipelines for scalable AI-driven platforms for real-time data discovery. Outside of work, I love experimenting with LLMs to solve quirky problems. I hold Masters Degree in Data Engineering and currently based Paris 🇫🇷.
     imageUrl: "home/Anurag_profile_pic_2.png"
     imageWidth: 200
     imageHeight: 200

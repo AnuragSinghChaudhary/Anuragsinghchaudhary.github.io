@@ -75,19 +75,21 @@ params:
     hiddenInSingle: false # hide on single page
 
   socialIcons:
-    - name: "cv"
-      url: "https://drive.google.com/file/d/1bm5oRCmlgI8wU6xI2uvoMp6SG49-19Ll/view?usp=sharing"
     - name: "twitter"
       url: "https://x.com/Anurag_chdry"
-    - name: "email"
-      url: "mailto:Anuragchaudahry004@gmail.com"
-    - name: "linkedin"
-      url: "https://www.linkedin.com/in/anurag-singh-chaudhary"
-    - name: "github"
-      url: "https://github.com/AnuragSinghChaudhary"
     - name: "youtube"
       url: "https://www.youtube.com/@anrag"
-
+    - name: "github"
+      url: "https://github.com/AnuragSinghChaudhary"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/anurag-singh-chaudhary"
+    - name: "cv"
+      url: "https://drive.google.com/file/d/1bm5oRCmlgI8wU6xI2uvoMp6SG49-19Ll/view?usp=sharing"
+    - name: "email"
+      url: "mailto:Anuragchaudahry004@gmail.com"
+    
+    
+    
     
     
 

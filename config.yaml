@@ -48,7 +48,7 @@ params:
   # Home Page
   profileMode:
     enabled: true
-    title: ""
+    title: "I code, build, and teach"
     subtitle: 🧑‍💻 Data Pipelines | 🔬 Researcher  | Paris 🇫🇷
     imageUrl: "home/Anurag_profile_pic_2.png"
     imageWidth: 200
@@ -87,10 +87,6 @@ params:
       url: "https://drive.google.com/file/d/1bm5oRCmlgI8wU6xI2uvoMp6SG49-19Ll/view?usp=sharing"
     - name: "email"
       url: "mailto:Anuragchaudahry004@gmail.com"
-    
-    
-    
-    
     
 
 

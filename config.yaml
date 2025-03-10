@@ -1,3 +1,121 @@
+# baseURL: "https://AnuragSinghChaudhary.github.io/"
+# languageCode: en-us
+# title: Anurag Chaudhary
+# theme: PaperMod
+
+# menu:
+#   main:
+#     - identifier: home
+#       name: Home
+#       url: /
+#       weight: 10
+#     - identifier: blog
+#       name: Blog
+#       url: /blog
+#       weight: 45
+#     # - identifier: projects
+#     #   name: Research Papers
+#     #   url: /projects
+#     #   weight: 30
+#     - identifier: experience
+#       name: Experience
+#       url: /experience
+#       weight: 40
+#     - identifier: search
+#       name: Search
+#       url: /search
+#       weight: 50
+#     # - identifier: tags
+#     #   name: Tags
+#     #   url: /tags
+#     #   weight: 60
+#     # - identifier: notes
+#     #   name: Notes
+#     #   url: https://notes.arkalim.org
+#     #   weight: 70
+
+# params:
+#   # theme
+#   showToc: true
+#   TocOpen: false
+#   ShowBreadCrumbs: true
+#   ShowCodeCopyButtons: true
+#   hideMeta: false
+
+#   # for enchanced SEO
+#   env: production
+
+#   # Home Page
+#   profileMode:
+#     enabled: true
+#     title: ""
+#     subtitle: 🧑‍💻 Data Pipelines | 🔬 Researcher  | Paris 🇫🇷
+#     imageUrl: "home/Anurag_profile_pic_2.png"
+#     imageWidth: 200
+#     imageHeight: 200
+#     # buttons:
+#     #   - name: Resume
+#     #     url: "https://drive.google.com/file/d/1V0QT_pO-s1EpOvjM5cwjXhSN-S6NpN4u/view?usp=sharing"
+#     # buttons:
+#     #   - name: Book 1:1 Discussion!
+#     #     url: "https://topmate.io/embed/profile/anurag_chaudhary10"
+
+#   # List View
+#   hideDescriptionInList: false
+
+#   # Blog Listing Appearance
+#   list:
+#     disableFeaturedImage: true
+#     showSummary: true
+#     showReadingTime: true
+
+#   # cover image for posts
+#   cover:
+#     hiddenInList: false # hide on list pages and home
+#     hiddenInSingle: false # hide on single page
+
+#   socialIcons:
+#     - name: "cv"
+#       url: "https://drive.google.com/file/d/1bm5oRCmlgI8wU6xI2uvoMp6SG49-19Ll/view?usp=sharing"
+#     - name: "twitter"
+#       url: "https://x.com/Anurag_chdry"
+#     - name: "email"
+#       url: "mailto:Anuragchaudahry004@gmail.com"
+#     - name: "linkedin"
+#       url: "https://www.linkedin.com/in/anurag-singh-chaudhary"
+#     - name: "github"
+#       url: "https://github.com/AnuragSinghChaudhary"
+#     - name: "youtube"
+#       url: "https://www.youtube.com/@anrag"
+
+    
+    
+
+
+#   # text search
+#   fuseOpts:
+#     isCaseSensitive: false
+#     shouldSort: true
+#     location: 0
+#     distance: 1000
+#     threshold: 0.4
+#     minMatchCharLength: 0
+#     keys: ["title", "permalink", "summary", "content"]
+
+# # for search using Fuse.js
+# outputs:
+#   home:
+#     - HTML
+#     - RSS
+#     - JSON
+
+# # allow HTML in MD
+# markup:
+#   goldmark:
+#     renderer:
+#       unsafe: true
+
+
 baseURL: "https://AnuragSinghChaudhary.github.io/"
 languageCode: en-us
 title: Anurag Chaudhary
@@ -13,10 +131,6 @@ menu:
       name: Blog
       url: /blog
       weight: 45
-    # - identifier: projects
-    #   name: Research Papers
-    #   url: /projects
-    #   weight: 30
     - identifier: experience
       name: Experience
       url: /experience
@@ -25,43 +139,38 @@ menu:
       name: Search
       url: /search
       weight: 50
-    # - identifier: tags
-    #   name: Tags
-    #   url: /tags
-    #   weight: 60
-    # - identifier: notes
-    #   name: Notes
-    #   url: https://notes.arkalim.org
-    #   weight: 70
 
 params:
-  # theme
+  # General Settings
   showToc: true
   TocOpen: false
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   hideMeta: false
-
-  # for enchanced SEO
   env: production
 
-  # Home Page
+  # Home Page (Welcome Text)
+  homeInfoParams:
+    Title: "👋 Welcome to my personal website!"
+    Content: |
+      I am **Anurag Chaudhary**, a Data Engineer & Researcher passionate about **Data Pipelines, Analytics, and AI**.
+      
+      Here, you'll find my **blog posts, research projects, and experience** in Data Engineering & Blockchain Analytics.
+      
+      - 📜 Check out my **Research Papers**  
+      - 📝 Read my **Blog Posts**  
+      - 💼 Explore my **Experience**  
+      
+      Feel free to connect on **LinkedIn** or explore my **GitHub**!
+
+  # Profile Mode (Avatar on Home Page)
   profileMode:
     enabled: true
     title: ""
-    subtitle: 🧑‍💻 Data Pipelines | 🔬 Researcher  | Paris 🇫🇷
+    subtitle: 🧑‍💻 Data Pipelines | 🔬 Researcher | Paris 🇫🇷
     imageUrl: "home/Anurag_profile_pic_2.png"
     imageWidth: 200
     imageHeight: 200
-    # buttons:
-    #   - name: Resume
-    #     url: "https://drive.google.com/file/d/1V0QT_pO-s1EpOvjM5cwjXhSN-S6NpN4u/view?usp=sharing"
-    # buttons:
-    #   - name: Book 1:1 Discussion!
-    #     url: "https://topmate.io/embed/profile/anurag_chaudhary10"
-
-  # List View
-  hideDescriptionInList: false
 
   # Blog Listing Appearance
   list:
@@ -69,11 +178,10 @@ params:
     showSummary: true
     showReadingTime: true
 
-  # cover image for posts
-  cover:
-    hiddenInList: false # hide on list pages and home
-    hiddenInSingle: false # hide on single page
+  # Pagination
+  pagination: 6
 
+  # Footer (Like the PaperMod Demo)
   socialIcons:
     - name: "cv"
       url: "https://drive.google.com/file/d/1bm5oRCmlgI8wU6xI2uvoMp6SG49-19Ll/view?usp=sharing"
@@ -88,11 +196,7 @@ params:
     - name: "youtube"
       url: "https://www.youtube.com/@anrag"
 
-    
-    
-
-
-  # text search
+  # Search Options
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -102,14 +206,14 @@ params:
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
 
-# for search using Fuse.js
+# Output formats
 outputs:
   home:
     - HTML
     - RSS
     - JSON
 
-# allow HTML in MD
+# Allow HTML in Markdown
 markup:
   goldmark:
     renderer:

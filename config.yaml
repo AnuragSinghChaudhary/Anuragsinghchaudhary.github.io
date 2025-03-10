@@ -63,6 +63,12 @@ params:
   # List View
   hideDescriptionInList: false
 
+  # Blog Listing Appearance
+  list:
+    disableFeaturedImage: true
+    showSummary: true
+    showReadingTime: true
+
   # cover image for posts
   cover:
     hiddenInList: false # hide on list pages and home

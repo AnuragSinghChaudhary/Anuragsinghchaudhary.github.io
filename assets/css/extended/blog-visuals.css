@@ -1,0 +1,19 @@
+.entry-cover {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+}
+
+.entry-cover img {
+    display: block;
+}
+
+.post-content img[src$=".gif"],
+.post-content img[src$=".svg"] {
+    width: 100%;
+    max-width: 860px;
+    margin-inline: auto;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(148, 163, 184, 0.08), rgba(148, 163, 184, 0.02));
+}

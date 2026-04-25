@@ -4,6 +4,9 @@ description: "A refreshed legacy guide to useful Python libraries for data analy
 date: 2017-03-14
 draft: false
 tags: ["Python", "Data Science", "Machine Learning", "Visualization", "Libraries"]
+cover:
+  image: "/blog/python-libraries-for-data-science/cover.svg"
+  alt: "Python data science library stack cover illustration"
 ---
 
 > Editor's note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.

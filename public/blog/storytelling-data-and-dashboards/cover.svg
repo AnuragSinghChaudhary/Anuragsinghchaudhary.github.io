@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Storytelling, data, and dashboards</title>
+  <desc id="desc">Illustration of charts and a narrative panel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="85" y="105" width="510" height="420" rx="26" fill="#f8fafc"/>
+  <rect x="635" y="105" width="480" height="420" rx="26" fill="#ecfeff" opacity=".95"/>
+  <g fill="#0f766e">
+    <rect x="130" y="165" width="330" height="18" rx="9"/>
+    <rect x="130" y="205" width="240" height="14" rx="7" opacity=".6"/>
+  </g>
+  <g fill="none" stroke="#0891b2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M135 420 225 355 310 372 405 250 535 210"/>
+  </g>
+  <g fill="#14b8a6">
+    <circle cx="225" cy="355" r="11"/>
+    <circle cx="405" cy="250" r="11"/>
+    <circle cx="535" cy="210" r="11"/>
+  </g>
+  <g fill="#155e75">
+    <rect x="690" y="170" width="255" height="16" rx="8"/>
+    <rect x="690" y="212" width="360" height="12" rx="6" opacity=".65"/>
+    <rect x="690" y="244" width="320" height="12" rx="6" opacity=".65"/>
+    <rect x="690" y="276" width="278" height="12" rx="6" opacity=".65"/>
+  </g>
+  <g fill="#f97316">
+    <rect x="696" y="340" width="74" height="115" rx="10"/>
+    <rect x="792" y="305" width="74" height="150" rx="10"/>
+    <rect x="888" y="270" width="74" height="185" rx="10"/>
+    <rect x="984" y="225" width="74" height="230" rx="10"/>
+  </g>
+  <text x="85" y="72" fill="#f8fafc" font-size="28" font-family="Arial, sans-serif">Better dashboards answer better questions.</text>
+  <text x="85" y="585" fill="#f8fafc" font-size="54" font-family="Arial, sans-serif" font-weight="700">Storytelling, Data, and Dashboards</text>
+</svg>

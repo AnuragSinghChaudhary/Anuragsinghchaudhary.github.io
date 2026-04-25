@@ -4,6 +4,9 @@ description: "A refreshed legacy explainer on the General Transit Feed Specifica
 date: 2019-05-18
 draft: false
 tags: ["GTFS", "Transit Data", "Geospatial", "Open Data", "Analytics"]
+cover:
+  image: "/blog/what-is-gtfs/cover.svg"
+  alt: "Transit data cover illustration for GTFS"
 ---
 
 > Editor's note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.
@@ -46,6 +49,8 @@ Depending on the feed, there may also be optional files for fares, shapes, trans
 ## Static GTFS vs real-time GTFS
 
 There are two broad ways people talk about GTFS.
+
+![Animated illustration of scheduled transit data flowing into live rider tools](/blog/what-is-gtfs/gtfs-flow.gif)
 
 ### 1. Static GTFS
 

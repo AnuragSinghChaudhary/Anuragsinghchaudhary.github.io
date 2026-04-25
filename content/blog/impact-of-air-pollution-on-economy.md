@@ -4,6 +4,9 @@ description: "A refreshed legacy essay on how air pollution affects productivity
 date: 2022-02-13
 draft: false
 tags: ["Air Quality", "Sustainability", "Economy", "Health", "Data"]
+cover:
+  image: "/blog/impact-of-air-pollution-on-economy/cover.svg"
+  alt: "Air quality cover illustration with emissions and economic signals"
 ---
 
 > Editor's note: this article is based on an older post from my WordPress archive and has been cleaned up for my current portfolio.

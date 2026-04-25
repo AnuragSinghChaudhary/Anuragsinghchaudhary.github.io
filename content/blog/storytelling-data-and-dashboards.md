@@ -4,6 +4,9 @@ description: "A refreshed legacy essay on why dashboards work better when they c
 date: 2019-08-22
 draft: false
 tags: ["Data Visualization", "Dashboards", "Analytics", "BI", "Storytelling"]
+cover:
+  image: "/blog/storytelling-data-and-dashboards/cover.svg"
+  alt: "Dashboard storytelling cover illustration"
 ---
 
 > Editor's note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.

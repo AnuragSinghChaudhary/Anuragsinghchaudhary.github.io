@@ -4,6 +4,9 @@ description: "A refreshed legacy explainer on underfitting, overfitting, and why
 date: 2019-06-18
 draft: false
 tags: ["Machine Learning", "Bias", "Variance", "Model Evaluation", "AI"]
+cover:
+  image: "/blog/bias-and-variance-in-plain-english/cover.svg"
+  alt: "Bias and variance cover illustration"
 ---
 
 > Editor's note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.
@@ -70,6 +73,8 @@ Most model-building work is really about balancing these two problems:
 
 - too much bias and the model is too crude
 - too much variance and the model is too fragile
+
+![Animated sketch of the bias-variance tradeoff across increasing model complexity](/blog/bias-and-variance-in-plain-english/bias-variance-tradeoff.gif)
 
 The goal is not zero bias or zero variance. The goal is to find a model that captures useful structure without becoming overly dependent on the training set.
 

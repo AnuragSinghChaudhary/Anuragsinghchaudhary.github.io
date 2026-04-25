@@ -4,9 +4,6 @@ description: "A refreshed legacy guide to the main stages of a machine learning 
 date: 2018-03-06
 draft: false
 tags: ["Machine Learning", "Workflow", "Modeling", "Data Science", "AI"]
-cover:
-  image: "/blog/seven-steps-of-machine-learning/cover.svg"
-  alt: "Machine learning workflow cover illustration"
 ---
 
 > Editor's note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.

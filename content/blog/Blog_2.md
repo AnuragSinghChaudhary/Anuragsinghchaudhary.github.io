@@ -9,9 +9,6 @@ aliases:
 draft: false
 tags: ["Deep Learning", "AI", "Data Mining", "Machine Learning"]
 weight: 101
-cover:
-  image: "/blog/data-mining-algorithms/cover.svg"
-  alt: "Illustration of core data mining algorithm families"
 ---
 > Editor's note: this article is based on an older post from my WordPress archive and has been updated for my current portfolio.
 

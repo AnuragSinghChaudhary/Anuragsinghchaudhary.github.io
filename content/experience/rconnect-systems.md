@@ -1,5 +1,5 @@
 ---
-title: "Associate Consultant"
+title: "Junior Consultant"
 description: "Rconnect Systems | Noida, India 🇮🇳"
 dateString: Aug 2014 - Jun 2017
 draft: false

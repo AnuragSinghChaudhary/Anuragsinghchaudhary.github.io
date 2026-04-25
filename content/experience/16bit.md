@@ -1,5 +1,5 @@
 ---
-title: "Data Scientist"
+title: "Junior Data Scientist"
 description: "JunoTerra | New Delhi, India 🇮🇳"
 dateString: Feb 2020 - Oct 2023
 draft: false

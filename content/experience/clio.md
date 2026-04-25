@@ -1,5 +1,5 @@
 ---
-title: "Data Engineer Intern"
+title: "Data Engineer"
 description: "CO2 AI | Paris, France 🇫🇷"
 dateString: Jan 2024 - Jul 2024
 draft: false

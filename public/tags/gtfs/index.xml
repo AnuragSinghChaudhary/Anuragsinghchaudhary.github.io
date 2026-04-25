@@ -5,7 +5,8 @@
     <link>https://AnuragSinghChaudhary.github.io/tags/gtfs/</link>
     <description>Recent content in GTFS on Anurag Chaudhary</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://AnuragSinghChaudhary.github.io/tags/gtfs/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/gtfs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Junior Data Scientist</title>
       <link>https://AnuragSinghChaudhary.github.io/experience/buyerassist/</link>
@@ -13,6 +14,15 @@
       
       <guid>https://AnuragSinghChaudhary.github.io/experience/buyerassist/</guid>
       <description>DolphinChat ai | Gurugram, India 🇮🇳</description>
+    </item>
+    
+    <item>
+      <title>What Is GTFS?</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/</link>
+      <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/</guid>
+      <description>A refreshed legacy explainer on the General Transit Feed Specification and why it matters for transit data products.</description>
     </item>
     
   </channel>

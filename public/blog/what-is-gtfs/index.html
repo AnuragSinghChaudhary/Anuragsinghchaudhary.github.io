@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>What Is GTFS? | Anurag Chaudhary</title>
+<meta name="keywords" content="GTFS, Transit Data, Geospatial, Open Data, Analytics">
+<meta name="description" content="A refreshed legacy explainer on the General Transit Feed Specification and why it matters for transit data products.">
+<meta name="author" content="">
+<link rel="canonical" href="https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.296af7cf9237b6b7ac9414e14faee9a2d1423e2794fb24bebbe524dbda37e86d.css" integrity="sha256-KWr3z5I3treslBThT67potFCPieU&#43;yS&#43;u&#43;Uk29o36G0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AnuragSinghChaudhary.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AnuragSinghChaudhary.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AnuragSinghChaudhary.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AnuragSinghChaudhary.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AnuragSinghChaudhary.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="What Is GTFS?" />
+<meta property="og:description" content="A refreshed legacy explainer on the General Transit Feed Specification and why it matters for transit data products." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2019-05-18T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2019-05-18T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="What Is GTFS?"/>
+<meta name="twitter:description" content="A refreshed legacy explainer on the General Transit Feed Specification and why it matters for transit data products."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "What Is GTFS?",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Is GTFS?",
+  "name": "What Is GTFS?",
+  "description": "A refreshed legacy explainer on the General Transit Feed Specification and why it matters for transit data products.",
+  "keywords": [
+    "GTFS", "Transit Data", "Geospatial", "Open Data", "Analytics"
+  ],
+  "articleBody": " Editor’s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.\nGTFS stands for General Transit Feed Specification. It is one of the most important open standards in public transport data because it gives transit agencies a consistent way to publish schedules, stops, routes, and trip information.\nIf you have ever checked a bus or metro route in a mapping product, there is a good chance GTFS was involved somewhere in the pipeline.\nWhy GTFS matters Public transit systems generate a lot of operational information, but that information is only useful at scale when it follows a common structure. GTFS helps create that structure.\nWith a standard feed, developers, planners, and analysts can:\nbuild journey-planning tools analyze route coverage and service gaps estimate travel times and transfers monitor schedule performance create rider-facing applications Without a common format, every city or operator becomes a custom integration problem.\nWhat a GTFS feed contains A GTFS feed is usually a collection of text files zipped together. Each file describes part of the transport system.\nSome of the key files are:\nagency.txt: the transit agency publishing the feed routes.txt: route identifiers, names, and types trips.txt: specific trips associated with routes and service patterns stops.txt: stop names and geographic locations stop_times.txt: arrival and departure times for each trip calendar.txt: days and dates when a service runs Depending on the feed, there may also be optional files for fares, shapes, transfers, frequencies, feed metadata, and calendar exceptions.\nStatic GTFS vs real-time GTFS There are two broad ways people talk about GTFS.\n1. Static GTFS This is the scheduled view of the network. It tells you what is supposed to happen: routes, stops, timetables, and service calendars.\n2. GTFS Realtime This adds operational updates, such as:\ntrip delays and cancellations service alerts vehicle positions Together, static and realtime data make it possible to build both planning tools and live rider experiences.\nWhy GTFS is useful beyond rider apps GTFS is often associated with consumer applications, but it is just as valuable for analysis and operational decision-making.\nFor example, a GTFS feed can be used to:\ncompare service availability across neighborhoods study route overlap and transfer complexity estimate first-mile and last-mile gaps monitor service coverage by time of day support planning decisions around new routes or revised frequencies This is where GTFS becomes more than a format. It becomes a foundation for transit analytics.\nWhy this topic stayed relevant for me I originally wrote about GTFS while exploring transport and geo-data use cases. It stayed interesting because it sits at the intersection of open data, mapping, operations, and public value.\nThat combination still feels relevant in 2026. A good transit feed is not only useful for commuters. It also supports governments, planners, and civic technologists who want to understand whether services are actually accessible and usable.\nChallenges in practice Even when GTFS exists, the hard part is often not the file format itself. It is the quality and maintenance of the feed.\nCommon issues include:\nincomplete stop metadata outdated schedules missing realtime coverage inconsistent identifiers across systems feeds that are technically valid but difficult to use analytically So the real work is often in validation, cleanup, joining external data, and building trustworthy downstream products.\nFinal thought GTFS matters because it turns public transit operations into reusable data infrastructure. Once that data is standardized, many things become possible: better passenger information, stronger planning tools, improved analytics, and more transparent transport systems.\nThat is why GTFS remains a useful concept to understand, even years after I first wrote about it.\n",
+  "wordCount" : "601",
+  "inLanguage": "en",
+  "datePublished": "2019-05-18T00:00:00Z",
+  "dateModified": "2019-05-18T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anurag Chaudhary",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AnuragSinghChaudhary.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header sticky-header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AnuragSinghChaudhary.github.io/" accesskey="h" title="Anurag Chaudhary (Alt + H)">Anurag Chaudhary</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AnuragSinghChaudhary.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://AnuragSinghChaudhary.github.io/blog/">Blogs</a></div>
+    <h1 class="post-title">
+      What Is GTFS?
+    </h1>
+    <div class="post-description">
+      A refreshed legacy explainer on the General Transit Feed Specification and why it matters for transit data products.
+    </div>
+    <div class="post-meta">
+
+
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">‎ Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#why-gtfs-matters" aria-label="Why GTFS matters">Why GTFS matters</a></li>
+                <li>
+                    <a href="#what-a-gtfs-feed-contains" aria-label="What a GTFS feed contains">What a GTFS feed contains</a></li>
+                <li>
+                    <a href="#static-gtfs-vs-real-time-gtfs" aria-label="Static GTFS vs real-time GTFS">Static GTFS vs real-time GTFS</a><ul>
+                        
+                <li>
+                    <a href="#1-static-gtfs" aria-label="1. Static GTFS">1. Static GTFS</a></li>
+                <li>
+                    <a href="#2-gtfs-realtime" aria-label="2. GTFS Realtime">2. GTFS Realtime</a></li></ul>
+                </li>
+                <li>
+                    <a href="#why-gtfs-is-useful-beyond-rider-apps" aria-label="Why GTFS is useful beyond rider apps">Why GTFS is useful beyond rider apps</a></li>
+                <li>
+                    <a href="#why-this-topic-stayed-relevant-for-me" aria-label="Why this topic stayed relevant for me">Why this topic stayed relevant for me</a></li>
+                <li>
+                    <a href="#challenges-in-practice" aria-label="Challenges in practice">Challenges in practice</a></li>
+                <li>
+                    <a href="#final-thought" aria-label="Final thought">Final thought</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><blockquote>
+<p>Editor&rsquo;s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.</p>
+</blockquote>
+<p>GTFS stands for <strong>General Transit Feed Specification</strong>. It is one of the most important open standards in public transport data because it gives transit agencies a consistent way to publish schedules, stops, routes, and trip information.</p>
+<p>If you have ever checked a bus or metro route in a mapping product, there is a good chance GTFS was involved somewhere in the pipeline.</p>
+<h2 id="why-gtfs-matters">Why GTFS matters<a hidden class="anchor" aria-hidden="true" href="#why-gtfs-matters">#</a></h2>
+<p>Public transit systems generate a lot of operational information, but that information is only useful at scale when it follows a common structure. GTFS helps create that structure.</p>
+<p>With a standard feed, developers, planners, and analysts can:</p>
+<ul>
+<li>build journey-planning tools</li>
+<li>analyze route coverage and service gaps</li>
+<li>estimate travel times and transfers</li>
+<li>monitor schedule performance</li>
+<li>create rider-facing applications</li>
+</ul>
+<p>Without a common format, every city or operator becomes a custom integration problem.</p>
+<h2 id="what-a-gtfs-feed-contains">What a GTFS feed contains<a hidden class="anchor" aria-hidden="true" href="#what-a-gtfs-feed-contains">#</a></h2>
+<p>A GTFS feed is usually a collection of text files zipped together. Each file describes part of the transport system.</p>
+<p>Some of the key files are:</p>
+<ul>
+<li><code>agency.txt</code>: the transit agency publishing the feed</li>
+<li><code>routes.txt</code>: route identifiers, names, and types</li>
+<li><code>trips.txt</code>: specific trips associated with routes and service patterns</li>
+<li><code>stops.txt</code>: stop names and geographic locations</li>
+<li><code>stop_times.txt</code>: arrival and departure times for each trip</li>
+<li><code>calendar.txt</code>: days and dates when a service runs</li>
+</ul>
+<p>Depending on the feed, there may also be optional files for fares, shapes, transfers, frequencies, feed metadata, and calendar exceptions.</p>
+<h2 id="static-gtfs-vs-real-time-gtfs">Static GTFS vs real-time GTFS<a hidden class="anchor" aria-hidden="true" href="#static-gtfs-vs-real-time-gtfs">#</a></h2>
+<p>There are two broad ways people talk about GTFS.</p>
+<h3 id="1-static-gtfs">1. Static GTFS<a hidden class="anchor" aria-hidden="true" href="#1-static-gtfs">#</a></h3>
+<p>This is the scheduled view of the network. It tells you what is supposed to happen: routes, stops, timetables, and service calendars.</p>
+<h3 id="2-gtfs-realtime">2. GTFS Realtime<a hidden class="anchor" aria-hidden="true" href="#2-gtfs-realtime">#</a></h3>
+<p>This adds operational updates, such as:</p>
+<ul>
+<li>trip delays and cancellations</li>
+<li>service alerts</li>
+<li>vehicle positions</li>
+</ul>
+<p>Together, static and realtime data make it possible to build both planning tools and live rider experiences.</p>
+<h2 id="why-gtfs-is-useful-beyond-rider-apps">Why GTFS is useful beyond rider apps<a hidden class="anchor" aria-hidden="true" href="#why-gtfs-is-useful-beyond-rider-apps">#</a></h2>
+<p>GTFS is often associated with consumer applications, but it is just as valuable for analysis and operational decision-making.</p>
+<p>For example, a GTFS feed can be used to:</p>
+<ul>
+<li>compare service availability across neighborhoods</li>
+<li>study route overlap and transfer complexity</li>
+<li>estimate first-mile and last-mile gaps</li>
+<li>monitor service coverage by time of day</li>
+<li>support planning decisions around new routes or revised frequencies</li>
+</ul>
+<p>This is where GTFS becomes more than a format. It becomes a foundation for transit analytics.</p>
+<h2 id="why-this-topic-stayed-relevant-for-me">Why this topic stayed relevant for me<a hidden class="anchor" aria-hidden="true" href="#why-this-topic-stayed-relevant-for-me">#</a></h2>
+<p>I originally wrote about GTFS while exploring transport and geo-data use cases. It stayed interesting because it sits at the intersection of open data, mapping, operations, and public value.</p>
+<p>That combination still feels relevant in 2026. A good transit feed is not only useful for commuters. It also supports governments, planners, and civic technologists who want to understand whether services are actually accessible and usable.</p>
+<h2 id="challenges-in-practice">Challenges in practice<a hidden class="anchor" aria-hidden="true" href="#challenges-in-practice">#</a></h2>
+<p>Even when GTFS exists, the hard part is often not the file format itself. It is the quality and maintenance of the feed.</p>
+<p>Common issues include:</p>
+<ul>
+<li>incomplete stop metadata</li>
+<li>outdated schedules</li>
+<li>missing realtime coverage</li>
+<li>inconsistent identifiers across systems</li>
+<li>feeds that are technically valid but difficult to use analytically</li>
+</ul>
+<p>So the real work is often in validation, cleanup, joining external data, and building trustworthy downstream products.</p>
+<h2 id="final-thought">Final thought<a hidden class="anchor" aria-hidden="true" href="#final-thought">#</a></h2>
+<p>GTFS matters because it turns public transit operations into reusable data infrastructure. Once that data is standardized, many things become possible: better passenger information, stronger planning tools, improved analytics, and more transparent transport systems.</p>
+<p>That is why GTFS remains a useful concept to understand, even years after I first wrote about it.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/gtfs/">GTFS</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/transit-data/">Transit Data</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/geospatial/">Geospatial</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/open-data/">Open Data</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/analytics/">Analytics</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 <a href="https://AnuragSinghChaudhary.github.io/">Anurag Chaudhary</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

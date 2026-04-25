@@ -1,7 +1,7 @@
 ---
-title: "Data Scientist"
+title: "Junior Data Scientist"
 description: "DolphinChat ai | Gurugram, India 🇮🇳"
-dateString: 1/2 Yr (July 2019 - Jan 2020)
+dateString: Jul 2019 - Jan 2020
 draft: false
 tags: ["docker", "NLP", "AI", "MongoDB", "AWS", "GTFS"]
 showToc: false
@@ -10,12 +10,12 @@ weight: 303
 
 ### Description
 
-- Development of NLP Chatbots for various use cases.
-- Build the pipeline of conversational AI and data storage for future model training.
-- Developed some visualisations for the Grievance system in d3.js
-- Worked on the unstructured data of complaints, wrote a NLP classifier for categorization.
-- Extracted geo-location data for creating the proof of concept on GTFS.
-- Used docker and web technologies that workaround the geo data science ecosystem.
+- Built NLP-driven chatbots for multiple use cases and deployment channels.
+- Improved chatbot behavior by using historical and ongoing conversations for better real-world interactions.
+- Developed data pipelines and storage layers to support future conversational model training.
+- Created d3.js visualizations for grievance-system analytics and reporting.
+- Worked with unstructured complaint data and built NLP classifiers for categorization.
+- Explored geo-location and GTFS proof-of-concept work using Docker and web-based data tooling.
 
 
 

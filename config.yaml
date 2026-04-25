@@ -52,7 +52,9 @@ params:
   homeInfoParams:
     Title: "Anurag Chaudhary"
     Content: >
-      🧑‍💻 Data Pipelines | AI | 🔬 Researcher | Paris 🇫🇷
+      Data Engineer and Data Scientist with 4+ years of experience building cloud data pipelines,
+      IoT data products, and AI workflows. Based in Paris and recently focused on sustainability
+      data engineering, carbon accounting pipelines, and production-ready analytics systems.
     imageUrl: "home/Anurag_profile_pic_2.png"
     imageWidth: 200
     imageHeight: 200

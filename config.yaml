@@ -47,18 +47,15 @@ params:
 
   # Home Page
   profileMode:
-    enabled: true
-    title: "I code, i build "
-    subtitle: 🧑‍💻 Data Pipelines | Ai | 🔬 Researcher  | Paris 🇫🇷
-    imageUrl: "home/Anurag_profile_pic_2.png"
-    imageWidth: 200
-    imageHeight: 200
-    # buttons:
-    #   - name: Resume
-    #     url: "https://drive.google.com/file/d/1V0QT_pO-s1EpOvjM5cwjXhSN-S6NpN4u/view?usp=sharing"
-    # buttons:
-    #   - name: Book 1:1 Discussion!
-    #     url: "https://topmate.io/embed/profile/anurag_chaudhary10"
+    enabled: false
+
+  homeInfoParams:
+    Title: "Anurag Chaudhary"
+    Content: >
+      🧑‍💻 Data Pipelines | AI | 🔬 Researcher | Paris 🇫🇷
+
+  mainSections:
+    - blog
 
   # List View
   hideDescriptionInList: false

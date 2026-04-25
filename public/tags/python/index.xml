@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Python on Anurag</title>
-    <link>http://localhost:1313/tags/python/</link>
-    <description>Recent content in Python on Anurag</description>
+    <title>Python on Anurag Chaudhary</title>
+    <link>https://AnuragSinghChaudhary.github.io/tags/python/</link>
+    <description>Recent content in Python on Anurag Chaudhary</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://AnuragSinghChaudhary.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automated Image Captioning (Bachelor Thesis)</title>
-      <link>http://localhost:1313/projects/automated-image-captioning/</link>
+      <link>https://AnuragSinghChaudhary.github.io/projects/automated-image-captioning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/projects/automated-image-captioning/</guid>
+      <guid>https://AnuragSinghChaudhary.github.io/projects/automated-image-captioning/</guid>
       <description>Can computers summarize the contents of an image?</description>
     </item>
     
     <item>
       <title>Face Landmarks Detection using CNN</title>
-      <link>http://localhost:1313/projects/face-landmarks-detection/</link>
+      <link>https://AnuragSinghChaudhary.github.io/projects/face-landmarks-detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/projects/face-landmarks-detection/</guid>
+      <guid>https://AnuragSinghChaudhary.github.io/projects/face-landmarks-detection/</guid>
       <description>Can computers really understand the human face?</description>
     </item>
     
     <item>
       <title>Gaze-tracking Goggles</title>
-      <link>http://localhost:1313/projects/gaze-tracking-goggles/</link>
+      <link>https://AnuragSinghChaudhary.github.io/projects/gaze-tracking-goggles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/projects/gaze-tracking-goggles/</guid>
+      <guid>https://AnuragSinghChaudhary.github.io/projects/gaze-tracking-goggles/</guid>
       <description>Smart Goggles for Gaze Analysis</description>
     </item>
     
     <item>
       <title>OpenQuad</title>
-      <link>http://localhost:1313/projects/openquad/</link>
+      <link>https://AnuragSinghChaudhary.github.io/projects/openquad/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/projects/openquad/</guid>
+      <guid>https://AnuragSinghChaudhary.github.io/projects/openquad/</guid>
       <description>Open-souce platform for drone automation</description>
     </item>
     
     <item>
       <title>Search and Reconnaissance Robot</title>
-      <link>http://localhost:1313/projects/search-and-reconnaissance-robot/</link>
+      <link>https://AnuragSinghChaudhary.github.io/projects/search-and-reconnaissance-robot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/projects/search-and-reconnaissance-robot/</guid>
+      <guid>https://AnuragSinghChaudhary.github.io/projects/search-and-reconnaissance-robot/</guid>
       <description>An all-terrain robot for disaster management!</description>
     </item>
     
     <item>
-      <title>Data Engineer intern </title>
-      <link>http://localhost:1313/experience/clio/</link>
+      <title>Data Engineer</title>
+      <link>https://AnuragSinghChaudhary.github.io/experience/clio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/experience/clio/</guid>
+      <guid>https://AnuragSinghChaudhary.github.io/experience/clio/</guid>
       <description>CO2 AI | Paris, France 🇫🇷</description>
     </item>
     
     <item>
       <title>Data Scientist</title>
-      <link>http://localhost:1313/experience/16bit/</link>
+      <link>https://AnuragSinghChaudhary.github.io/experience/16bit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/experience/16bit/</guid>
+      <guid>https://AnuragSinghChaudhary.github.io/experience/16bit/</guid>
       <description>JunoTerra | New Delhi, India 🇮🇳</description>
     </item>
     

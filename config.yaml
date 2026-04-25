@@ -53,8 +53,6 @@ params:
     Title: "Anurag Chaudhary"
     Content: >
       Data Engineer in Paris building sustainability, IoT, and AI-powered data products.
-      I work on production pipelines, carbon-accounting workflows, and decision-friendly analytics,
-      and I write about transit data, dashboards, machine learning, and real-world data systems.
     imageUrl: "home/Anurag_profile_pic_2.png"
     imageWidth: 200
     imageHeight: 200

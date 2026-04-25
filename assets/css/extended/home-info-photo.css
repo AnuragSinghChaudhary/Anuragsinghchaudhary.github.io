@@ -1,0 +1,26 @@
+.home-info {
+    align-items: center;
+    text-align: center;
+}
+
+.home-info-avatar {
+    margin-bottom: 18px;
+}
+
+.home-info-avatar img {
+    display: inline-table;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.home-info .social-icons {
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .home-info-avatar img {
+        width: 170px;
+        height: 170px;
+    }
+}

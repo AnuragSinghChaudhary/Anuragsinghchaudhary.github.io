@@ -53,6 +53,10 @@ params:
     Title: "Anurag Chaudhary"
     Content: >
       🧑‍💻 Data Pipelines | AI | 🔬 Researcher | Paris 🇫🇷
+    imageUrl: "home/Anurag_profile_pic_2.png"
+    imageWidth: 200
+    imageHeight: 200
+    imageTitle: "Anurag Chaudhary profile photo"
 
   mainSections:
     - blog

@@ -16,5 +16,14 @@
       <description>A refreshed legacy explainer on the General Transit Feed Specification and why it matters for transit data products.</description>
     </item>
     
+    <item>
+      <title>Public Datasets for Data Analysis</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/public-datasets-for-data-analysis/</link>
+      <pubDate>Tue, 12 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/public-datasets-for-data-analysis/</guid>
+      <description>A refreshed legacy resource guide to useful public datasets for analytics, machine learning, economics, health, and open data projects.</description>
+    </item>
+    
   </channel>
 </rss>

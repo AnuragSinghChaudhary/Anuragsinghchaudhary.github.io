@@ -12,6 +12,8 @@ Dashboards are often treated as collections of charts, filters, and KPIs. But th
 
 That is where storytelling comes in.
 
+A good dashboard should reduce confusion, not add more of it. 📊
+
 ## Why storytelling matters in analytics
 
 People do not naturally remember isolated metrics. They remember context, contrast, and sequence. A good dashboard works because it helps someone move from raw numbers to a decision. In other words, it tells a story:

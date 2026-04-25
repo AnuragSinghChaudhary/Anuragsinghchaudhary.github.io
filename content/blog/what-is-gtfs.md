@@ -12,6 +12,8 @@ GTFS stands for **General Transit Feed Specification**. It is one of the most im
 
 If you have ever checked a bus or metro route in a mapping product, there is a good chance GTFS was involved somewhere in the pipeline.
 
+It is one of those standards that looks simple on the surface but unlocks a lot of real-world value. 🗺️
+
 ## Why GTFS matters
 
 Public transit systems generate a lot of operational information, but that information is only useful at scale when it follows a common structure. GTFS helps create that structure.

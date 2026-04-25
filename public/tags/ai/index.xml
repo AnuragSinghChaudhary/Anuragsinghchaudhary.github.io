@@ -5,7 +5,8 @@
     <link>https://AnuragSinghChaudhary.github.io/tags/ai/</link>
     <description>Recent content in AI on Anurag Chaudhary</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://AnuragSinghChaudhary.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>11 Essential Data Mining Algorithms</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/blog_2/</link>
@@ -67,6 +68,24 @@
       
       <guid>https://AnuragSinghChaudhary.github.io/experience/buyerassist/</guid>
       <description>DolphinChat ai | Gurugram, India 🇮🇳</description>
+    </item>
+    
+    <item>
+      <title>Bias and Variance in Plain English</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/bias-and-variance-in-plain-english/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/bias-and-variance-in-plain-english/</guid>
+      <description>A refreshed legacy explainer on underfitting, overfitting, and why machine learning models fail to generalize.</description>
+    </item>
+    
+    <item>
+      <title>Seven Steps of a Machine Learning Project</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/</guid>
+      <description>A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction.</description>
     </item>
     
   </channel>

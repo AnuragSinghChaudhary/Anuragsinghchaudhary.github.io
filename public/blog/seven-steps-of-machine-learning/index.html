@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Seven Steps of a Machine Learning Project | Anurag Chaudhary</title>
+<meta name="keywords" content="Machine Learning, Workflow, Modeling, Data Science, AI">
+<meta name="description" content="A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction.">
+<meta name="author" content="">
+<link rel="canonical" href="https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.296af7cf9237b6b7ac9414e14faee9a2d1423e2794fb24bebbe524dbda37e86d.css" integrity="sha256-KWr3z5I3treslBThT67potFCPieU&#43;yS&#43;u&#43;Uk29o36G0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AnuragSinghChaudhary.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AnuragSinghChaudhary.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AnuragSinghChaudhary.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AnuragSinghChaudhary.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AnuragSinghChaudhary.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Seven Steps of a Machine Learning Project" />
+<meta property="og:description" content="A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2018-03-06T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2018-03-06T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Seven Steps of a Machine Learning Project"/>
+<meta name="twitter:description" content="A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Seven Steps of a Machine Learning Project",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Seven Steps of a Machine Learning Project",
+  "name": "Seven Steps of a Machine Learning Project",
+  "description": "A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction.",
+  "keywords": [
+    "Machine Learning", "Workflow", "Modeling", "Data Science", "AI"
+  ],
+  "articleBody": " Editor’s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.\nMachine learning can feel abstract when you first encounter it, but most projects still follow a fairly practical sequence. The details vary by domain, team, and model type, yet the overall workflow is surprisingly stable.\nHere is a simple seven-step view of a machine learning project. 🚀\n1. Gather the data Every model starts with data. The quality of the project depends heavily on whether the data actually represents the problem you want to solve.\nAt this stage, the key questions are:\nwhat are we trying to predict? what examples do we have? are the labels trustworthy? is the data broad enough to represent the real world? 2. Prepare the data Raw data is rarely ready for modeling.\nPreparation often includes:\ncleaning errors handling missing values removing duplicates encoding categories normalizing or scaling variables defining train, validation, and test splits This step is less glamorous than training a model, but it usually matters more than people expect.\n3. Choose a model Different problems call for different model families. A baseline logistic regression, a gradient-boosted tree, and a neural network all behave differently and come with different tradeoffs.\nChoosing a model is not about picking the most complex option. It is about picking something appropriate for the task, the data size, the explainability needs, and the deployment constraints.\n4. Train the model Training is the stage where the model learns patterns from the data.\nIn simple terms, the model starts with imperfect parameters, makes predictions, compares them against the correct answers, and updates itself repeatedly to reduce error.\nThis is where concepts like optimization, loss functions, weights, and bias terms become practical rather than theoretical.\n5. Evaluate the model A model that performs well on training data is not automatically useful. The real question is whether it performs well on data it has not seen before.\nThat is why evaluation matters.\nDepending on the problem, evaluation might involve:\naccuracy precision and recall F1 score ROC-AUC RMSE or MAE calibration or ranking quality The right metric depends on the decision context, not just the algorithm.\n6. Tune and improve Once you have a baseline, you improve it.\nThat can mean:\ntuning hyperparameters selecting better features trying different architectures reducing bias or variance improving the data itself This stage is iterative. Most useful models are not built in one pass.\n7. Make predictions and use the model Eventually, the model moves from experimentation to application.\nThat might mean generating forecasts, classifying incoming records, ranking results, or supporting a product feature. In real systems, this stage also involves monitoring, retraining, and checking whether the model still performs well over time.\nWhy this workflow still holds up Even though tools and model families evolve, the broader structure still makes sense in 2026. Whether you are building a small tabular model or a large AI-assisted system, you still need:\ngood data clear evaluation realistic deployment thinking The workflow persists because the fundamentals persist.\nFinal thought Machine learning is not just model training. It is a sequence of decisions about data, assumptions, evaluation, and usefulness.\nIf you understand that workflow clearly, the field becomes much easier to navigate. ✅\n",
+  "wordCount" : "544",
+  "inLanguage": "en",
+  "datePublished": "2018-03-06T00:00:00Z",
+  "dateModified": "2018-03-06T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anurag Chaudhary",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AnuragSinghChaudhary.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header sticky-header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AnuragSinghChaudhary.github.io/" accesskey="h" title="Anurag Chaudhary (Alt + H)">Anurag Chaudhary</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AnuragSinghChaudhary.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://AnuragSinghChaudhary.github.io/blog/">Blogs</a></div>
+    <h1 class="post-title">
+      Seven Steps of a Machine Learning Project
+    </h1>
+    <div class="post-description">
+      A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction.
+    </div>
+    <div class="post-meta">
+
+
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">‎ Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-gather-the-data" aria-label="1. Gather the data">1. Gather the data</a></li>
+                <li>
+                    <a href="#2-prepare-the-data" aria-label="2. Prepare the data">2. Prepare the data</a></li>
+                <li>
+                    <a href="#3-choose-a-model" aria-label="3. Choose a model">3. Choose a model</a></li>
+                <li>
+                    <a href="#4-train-the-model" aria-label="4. Train the model">4. Train the model</a></li>
+                <li>
+                    <a href="#5-evaluate-the-model" aria-label="5. Evaluate the model">5. Evaluate the model</a></li>
+                <li>
+                    <a href="#6-tune-and-improve" aria-label="6. Tune and improve">6. Tune and improve</a></li>
+                <li>
+                    <a href="#7-make-predictions-and-use-the-model" aria-label="7. Make predictions and use the model">7. Make predictions and use the model</a></li>
+                <li>
+                    <a href="#why-this-workflow-still-holds-up" aria-label="Why this workflow still holds up">Why this workflow still holds up</a></li>
+                <li>
+                    <a href="#final-thought" aria-label="Final thought">Final thought</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><blockquote>
+<p>Editor&rsquo;s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.</p>
+</blockquote>
+<p>Machine learning can feel abstract when you first encounter it, but most projects still follow a fairly practical sequence. The details vary by domain, team, and model type, yet the overall workflow is surprisingly stable.</p>
+<p>Here is a simple seven-step view of a machine learning project. 🚀</p>
+<h2 id="1-gather-the-data">1. Gather the data<a hidden class="anchor" aria-hidden="true" href="#1-gather-the-data">#</a></h2>
+<p>Every model starts with data. The quality of the project depends heavily on whether the data actually represents the problem you want to solve.</p>
+<p>At this stage, the key questions are:</p>
+<ul>
+<li>what are we trying to predict?</li>
+<li>what examples do we have?</li>
+<li>are the labels trustworthy?</li>
+<li>is the data broad enough to represent the real world?</li>
+</ul>
+<h2 id="2-prepare-the-data">2. Prepare the data<a hidden class="anchor" aria-hidden="true" href="#2-prepare-the-data">#</a></h2>
+<p>Raw data is rarely ready for modeling.</p>
+<p>Preparation often includes:</p>
+<ul>
+<li>cleaning errors</li>
+<li>handling missing values</li>
+<li>removing duplicates</li>
+<li>encoding categories</li>
+<li>normalizing or scaling variables</li>
+<li>defining train, validation, and test splits</li>
+</ul>
+<p>This step is less glamorous than training a model, but it usually matters more than people expect.</p>
+<h2 id="3-choose-a-model">3. Choose a model<a hidden class="anchor" aria-hidden="true" href="#3-choose-a-model">#</a></h2>
+<p>Different problems call for different model families. A baseline logistic regression, a gradient-boosted tree, and a neural network all behave differently and come with different tradeoffs.</p>
+<p>Choosing a model is not about picking the most complex option. It is about picking something appropriate for the task, the data size, the explainability needs, and the deployment constraints.</p>
+<h2 id="4-train-the-model">4. Train the model<a hidden class="anchor" aria-hidden="true" href="#4-train-the-model">#</a></h2>
+<p>Training is the stage where the model learns patterns from the data.</p>
+<p>In simple terms, the model starts with imperfect parameters, makes predictions, compares them against the correct answers, and updates itself repeatedly to reduce error.</p>
+<p>This is where concepts like optimization, loss functions, weights, and bias terms become practical rather than theoretical.</p>
+<h2 id="5-evaluate-the-model">5. Evaluate the model<a hidden class="anchor" aria-hidden="true" href="#5-evaluate-the-model">#</a></h2>
+<p>A model that performs well on training data is not automatically useful. The real question is whether it performs well on data it has not seen before.</p>
+<p>That is why evaluation matters.</p>
+<p>Depending on the problem, evaluation might involve:</p>
+<ul>
+<li>accuracy</li>
+<li>precision and recall</li>
+<li>F1 score</li>
+<li>ROC-AUC</li>
+<li>RMSE or MAE</li>
+<li>calibration or ranking quality</li>
+</ul>
+<p>The right metric depends on the decision context, not just the algorithm.</p>
+<h2 id="6-tune-and-improve">6. Tune and improve<a hidden class="anchor" aria-hidden="true" href="#6-tune-and-improve">#</a></h2>
+<p>Once you have a baseline, you improve it.</p>
+<p>That can mean:</p>
+<ul>
+<li>tuning hyperparameters</li>
+<li>selecting better features</li>
+<li>trying different architectures</li>
+<li>reducing bias or variance</li>
+<li>improving the data itself</li>
+</ul>
+<p>This stage is iterative. Most useful models are not built in one pass.</p>
+<h2 id="7-make-predictions-and-use-the-model">7. Make predictions and use the model<a hidden class="anchor" aria-hidden="true" href="#7-make-predictions-and-use-the-model">#</a></h2>
+<p>Eventually, the model moves from experimentation to application.</p>
+<p>That might mean generating forecasts, classifying incoming records, ranking results, or supporting a product feature. In real systems, this stage also involves monitoring, retraining, and checking whether the model still performs well over time.</p>
+<h2 id="why-this-workflow-still-holds-up">Why this workflow still holds up<a hidden class="anchor" aria-hidden="true" href="#why-this-workflow-still-holds-up">#</a></h2>
+<p>Even though tools and model families evolve, the broader structure still makes sense in 2026. Whether you are building a small tabular model or a large AI-assisted system, you still need:</p>
+<ul>
+<li>good data</li>
+<li>clear evaluation</li>
+<li>realistic deployment thinking</li>
+</ul>
+<p>The workflow persists because the fundamentals persist.</p>
+<h2 id="final-thought">Final thought<a hidden class="anchor" aria-hidden="true" href="#final-thought">#</a></h2>
+<p>Machine learning is not just model training. It is a sequence of decisions about data, assumptions, evaluation, and usefulness.</p>
+<p>If you understand that workflow clearly, the field becomes much easier to navigate. ✅</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/machine-learning/">Machine Learning</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/workflow/">Workflow</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/modeling/">Modeling</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/data-science/">Data Science</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/ai/">AI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 <a href="https://AnuragSinghChaudhary.github.io/">Anurag Chaudhary</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

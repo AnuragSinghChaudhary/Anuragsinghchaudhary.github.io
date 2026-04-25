@@ -35,12 +35,39 @@
     </item>
     
     <item>
+      <title>Bias and Variance in Plain English</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/bias-and-variance-in-plain-english/</link>
+      <pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/bias-and-variance-in-plain-english/</guid>
+      <description>A refreshed legacy explainer on underfitting, overfitting, and why machine learning models fail to generalize.</description>
+    </item>
+    
+    <item>
       <title>What Is GTFS?</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/</guid>
       <description>A refreshed legacy explainer on the General Transit Feed Specification and why it matters for transit data products.</description>
+    </item>
+    
+    <item>
+      <title>Seven Steps of a Machine Learning Project</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/</guid>
+      <description>A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction.</description>
+    </item>
+    
+    <item>
+      <title>Public Datasets for Data Analysis</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/public-datasets-for-data-analysis/</link>
+      <pubDate>Tue, 12 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/public-datasets-for-data-analysis/</guid>
+      <description>A refreshed legacy resource guide to useful public datasets for analytics, machine learning, economics, health, and open data projects.</description>
     </item>
     
   </channel>

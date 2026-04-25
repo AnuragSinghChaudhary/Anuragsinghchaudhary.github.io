@@ -10,6 +10,8 @@ tags: ["Air Quality", "Sustainability", "Economy", "Health", "Data"]
 
 Air pollution is often framed as a public-health issue first, but it is also an economic problem. When air quality deteriorates, the cost does not stop at hospital visits or reduced lung function. It shows up in productivity loss, absenteeism, healthcare spending, and the long-term pressure placed on households, businesses, and public systems.
 
+In short: cleaner air is not only a health goal, it is also a systems and economics problem. 🌍
+
 ## Why the economic angle matters
 
 Poor air quality affects people before it affects balance sheets, but eventually it reaches both. Exposure to polluted air contributes to respiratory and cardiovascular disease, worsens chronic conditions, and increases the burden on healthcare systems. That burden then translates into lost work, reduced output, and higher direct and indirect costs for the wider economy.

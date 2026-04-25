@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>CAP Theorem Explained | Anurag Chaudhary</title>
+<meta name="keywords" content="Distributed Systems, CAP Theorem, Databases, Big Data, Architecture">
+<meta name="description" content="A refreshed legacy explainer on consistency, availability, and partition tolerance in distributed systems.">
+<meta name="author" content="">
+<link rel="canonical" href="https://AnuragSinghChaudhary.github.io/blog/cap-theorem-explained/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.296af7cf9237b6b7ac9414e14faee9a2d1423e2794fb24bebbe524dbda37e86d.css" integrity="sha256-KWr3z5I3treslBThT67potFCPieU&#43;yS&#43;u&#43;Uk29o36G0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AnuragSinghChaudhary.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AnuragSinghChaudhary.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AnuragSinghChaudhary.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AnuragSinghChaudhary.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AnuragSinghChaudhary.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://AnuragSinghChaudhary.github.io/blog/cap-theorem-explained/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="CAP Theorem Explained" />
+<meta property="og:description" content="A refreshed legacy explainer on consistency, availability, and partition tolerance in distributed systems." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AnuragSinghChaudhary.github.io/blog/cap-theorem-explained/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2016-11-11T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2016-11-11T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CAP Theorem Explained"/>
+<meta name="twitter:description" content="A refreshed legacy explainer on consistency, availability, and partition tolerance in distributed systems."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "CAP Theorem Explained",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/cap-theorem-explained/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CAP Theorem Explained",
+  "name": "CAP Theorem Explained",
+  "description": "A refreshed legacy explainer on consistency, availability, and partition tolerance in distributed systems.",
+  "keywords": [
+    "Distributed Systems", "CAP Theorem", "Databases", "Big Data", "Architecture"
+  ],
+  "articleBody": " Editor’s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.\nIf you spend enough time around distributed systems, databases, or large-scale data platforms, you eventually run into the CAP theorem.\nIt is one of those ideas that appears simple on the surface and then keeps coming back as systems become more real. 🧩\nThe basic idea CAP refers to three properties:\nConsistency Availability Partition tolerance The simplified version of the theorem says that when a network partition happens, a distributed system has to make tradeoffs between consistency and availability.\nThat sentence is more useful than the oversimplified slogan that systems can “only pick two.” The practical point is that distributed systems face tradeoffs under failure.\nWhat each term means Consistency All clients see the same data at the same time after an update. In practical terms, once a write succeeds, future reads should reflect that write consistently across the system.\nAvailability The system continues responding to requests, even during failure conditions. A response might not always reflect the newest write, but the service remains reachable.\nPartition tolerance The system keeps operating even when parts of the network cannot communicate reliably with each other.\nThis is the non-negotiable part in many real distributed environments. Networks fail. Links degrade. Nodes become temporarily unreachable.\nWhy the tradeoff exists Imagine a distributed database spread across multiple nodes. If the network between those nodes breaks, the system now has a decision to make:\nreject some requests to preserve a single consistent view or continue serving requests and risk divergent views temporarily That is where the real CAP tradeoff shows up.\nWhy this matters in practice CAP is useful because it forces system designers to ask better questions:\nhow much inconsistency can this application tolerate? how costly is downtime for this workflow? what kinds of failures are we designing for? The right answer depends on the product, not on a slogan.\nCommon misunderstandings “You can always choose any two” This is the most common oversimplification. In reality, once a partition happens, partition tolerance is not optional. The real tension is how the system behaves with respect to consistency and availability during that partition.\n“One database is permanently one CAP label” Many systems offer tunable behavior, replication strategies, and different tradeoffs depending on workload, topology, or configuration.\nWhy CAP still matters Even though the conversation around modern systems includes many other ideas, CAP remains useful as a thinking tool. It helps teams reason about failure, latency, tradeoffs, and architecture decisions in a disciplined way.\nThat is especially important in data engineering, backend architecture, and distributed data platforms, where system behavior under imperfect conditions matters more than ideal-case diagrams.\nFinal thought CAP theorem is not a trick question. It is a reminder that distributed systems become interesting the moment the network stops being perfect.\nOnce you understand that, you start designing systems with tradeoffs in mind instead of assuming everything will work all the time. 🌐\n",
+  "wordCount" : "500",
+  "inLanguage": "en",
+  "datePublished": "2016-11-11T00:00:00Z",
+  "dateModified": "2016-11-11T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AnuragSinghChaudhary.github.io/blog/cap-theorem-explained/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anurag Chaudhary",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AnuragSinghChaudhary.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header sticky-header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AnuragSinghChaudhary.github.io/" accesskey="h" title="Anurag Chaudhary (Alt + H)">Anurag Chaudhary</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AnuragSinghChaudhary.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://AnuragSinghChaudhary.github.io/blog/">Blogs</a></div>
+    <h1 class="post-title">
+      CAP Theorem Explained
+    </h1>
+    <div class="post-description">
+      A refreshed legacy explainer on consistency, availability, and partition tolerance in distributed systems.
+    </div>
+    <div class="post-meta">
+
+
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">‎ Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#the-basic-idea" aria-label="The basic idea">The basic idea</a></li>
+                <li>
+                    <a href="#what-each-term-means" aria-label="What each term means">What each term means</a><ul>
+                        
+                <li>
+                    <a href="#consistency" aria-label="Consistency">Consistency</a></li>
+                <li>
+                    <a href="#availability" aria-label="Availability">Availability</a></li>
+                <li>
+                    <a href="#partition-tolerance" aria-label="Partition tolerance">Partition tolerance</a></li></ul>
+                </li>
+                <li>
+                    <a href="#why-the-tradeoff-exists" aria-label="Why the tradeoff exists">Why the tradeoff exists</a></li>
+                <li>
+                    <a href="#why-this-matters-in-practice" aria-label="Why this matters in practice">Why this matters in practice</a></li>
+                <li>
+                    <a href="#common-misunderstandings" aria-label="Common misunderstandings">Common misunderstandings</a><ul>
+                        
+                <li>
+                    <a href="#you-can-always-choose-any-two" aria-label="“You can always choose any two”">“You can always choose any two”</a></li>
+                <li>
+                    <a href="#one-database-is-permanently-one-cap-label" aria-label="“One database is permanently one CAP label”">“One database is permanently one CAP label”</a></li></ul>
+                </li>
+                <li>
+                    <a href="#why-cap-still-matters" aria-label="Why CAP still matters">Why CAP still matters</a></li>
+                <li>
+                    <a href="#final-thought" aria-label="Final thought">Final thought</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><blockquote>
+<p>Editor&rsquo;s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.</p>
+</blockquote>
+<p>If you spend enough time around distributed systems, databases, or large-scale data platforms, you eventually run into the <strong>CAP theorem</strong>.</p>
+<p>It is one of those ideas that appears simple on the surface and then keeps coming back as systems become more real. 🧩</p>
+<h2 id="the-basic-idea">The basic idea<a hidden class="anchor" aria-hidden="true" href="#the-basic-idea">#</a></h2>
+<p>CAP refers to three properties:</p>
+<ul>
+<li><strong>Consistency</strong></li>
+<li><strong>Availability</strong></li>
+<li><strong>Partition tolerance</strong></li>
+</ul>
+<p>The simplified version of the theorem says that when a network partition happens, a distributed system has to make tradeoffs between consistency and availability.</p>
+<p>That sentence is more useful than the oversimplified slogan that systems can “only pick two.” The practical point is that distributed systems face tradeoffs under failure.</p>
+<h2 id="what-each-term-means">What each term means<a hidden class="anchor" aria-hidden="true" href="#what-each-term-means">#</a></h2>
+<h3 id="consistency">Consistency<a hidden class="anchor" aria-hidden="true" href="#consistency">#</a></h3>
+<p>All clients see the same data at the same time after an update. In practical terms, once a write succeeds, future reads should reflect that write consistently across the system.</p>
+<h3 id="availability">Availability<a hidden class="anchor" aria-hidden="true" href="#availability">#</a></h3>
+<p>The system continues responding to requests, even during failure conditions. A response might not always reflect the newest write, but the service remains reachable.</p>
+<h3 id="partition-tolerance">Partition tolerance<a hidden class="anchor" aria-hidden="true" href="#partition-tolerance">#</a></h3>
+<p>The system keeps operating even when parts of the network cannot communicate reliably with each other.</p>
+<p>This is the non-negotiable part in many real distributed environments. Networks fail. Links degrade. Nodes become temporarily unreachable.</p>
+<h2 id="why-the-tradeoff-exists">Why the tradeoff exists<a hidden class="anchor" aria-hidden="true" href="#why-the-tradeoff-exists">#</a></h2>
+<p>Imagine a distributed database spread across multiple nodes. If the network between those nodes breaks, the system now has a decision to make:</p>
+<ul>
+<li>reject some requests to preserve a single consistent view</li>
+<li>or continue serving requests and risk divergent views temporarily</li>
+</ul>
+<p>That is where the real CAP tradeoff shows up.</p>
+<h2 id="why-this-matters-in-practice">Why this matters in practice<a hidden class="anchor" aria-hidden="true" href="#why-this-matters-in-practice">#</a></h2>
+<p>CAP is useful because it forces system designers to ask better questions:</p>
+<ul>
+<li>how much inconsistency can this application tolerate?</li>
+<li>how costly is downtime for this workflow?</li>
+<li>what kinds of failures are we designing for?</li>
+</ul>
+<p>The right answer depends on the product, not on a slogan.</p>
+<h2 id="common-misunderstandings">Common misunderstandings<a hidden class="anchor" aria-hidden="true" href="#common-misunderstandings">#</a></h2>
+<h3 id="you-can-always-choose-any-two">“You can always choose any two”<a hidden class="anchor" aria-hidden="true" href="#you-can-always-choose-any-two">#</a></h3>
+<p>This is the most common oversimplification. In reality, once a partition happens, partition tolerance is not optional. The real tension is how the system behaves with respect to consistency and availability during that partition.</p>
+<h3 id="one-database-is-permanently-one-cap-label">“One database is permanently one CAP label”<a hidden class="anchor" aria-hidden="true" href="#one-database-is-permanently-one-cap-label">#</a></h3>
+<p>Many systems offer tunable behavior, replication strategies, and different tradeoffs depending on workload, topology, or configuration.</p>
+<h2 id="why-cap-still-matters">Why CAP still matters<a hidden class="anchor" aria-hidden="true" href="#why-cap-still-matters">#</a></h2>
+<p>Even though the conversation around modern systems includes many other ideas, CAP remains useful as a thinking tool. It helps teams reason about failure, latency, tradeoffs, and architecture decisions in a disciplined way.</p>
+<p>That is especially important in data engineering, backend architecture, and distributed data platforms, where system behavior under imperfect conditions matters more than ideal-case diagrams.</p>
+<h2 id="final-thought">Final thought<a hidden class="anchor" aria-hidden="true" href="#final-thought">#</a></h2>
+<p>CAP theorem is not a trick question. It is a reminder that distributed systems become interesting the moment the network stops being perfect.</p>
+<p>Once you understand that, you start designing systems with tradeoffs in mind instead of assuming everything will work all the time. 🌐</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/distributed-systems/">Distributed Systems</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/cap-theorem/">CAP Theorem</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/databases/">Databases</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/big-data/">Big Data</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/architecture/">Architecture</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 <a href="https://AnuragSinghChaudhary.github.io/">Anurag Chaudhary</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

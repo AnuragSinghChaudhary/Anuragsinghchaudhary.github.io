@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Python Libraries for Data Science | Anurag Chaudhary</title>
+<meta name="keywords" content="Python, Data Science, Machine Learning, Visualization, Libraries">
+<meta name="description" content="A refreshed legacy guide to useful Python libraries for data analysis, machine learning, visualization, and data engineering workflows.">
+<meta name="author" content="">
+<link rel="canonical" href="https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.296af7cf9237b6b7ac9414e14faee9a2d1423e2794fb24bebbe524dbda37e86d.css" integrity="sha256-KWr3z5I3treslBThT67potFCPieU&#43;yS&#43;u&#43;Uk29o36G0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AnuragSinghChaudhary.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AnuragSinghChaudhary.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AnuragSinghChaudhary.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AnuragSinghChaudhary.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AnuragSinghChaudhary.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Python Libraries for Data Science" />
+<meta property="og:description" content="A refreshed legacy guide to useful Python libraries for data analysis, machine learning, visualization, and data engineering workflows." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2017-03-14T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2017-03-14T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python Libraries for Data Science"/>
+<meta name="twitter:description" content="A refreshed legacy guide to useful Python libraries for data analysis, machine learning, visualization, and data engineering workflows."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Python Libraries for Data Science",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Python Libraries for Data Science",
+  "name": "Python Libraries for Data Science",
+  "description": "A refreshed legacy guide to useful Python libraries for data analysis, machine learning, visualization, and data engineering workflows.",
+  "keywords": [
+    "Python", "Data Science", "Machine Learning", "Visualization", "Libraries"
+  ],
+  "articleBody": " Editor’s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.\nThe Python ecosystem is one of the main reasons data work became so accessible. You can move from cleaning messy tables to training models, building dashboards, or scaling workflows without switching languages every few hours.\nThat does not mean every library matters equally. The useful question in 2026 is not “what are all the libraries?” It is “which libraries are worth learning first, and what are they actually good for?” 🐍\n1. Data manipulation and analysis pandas If you work with tabular data, pandas is still one of the first libraries to learn.\nIt is useful for:\nreading and writing files cleaning data joining datasets grouping and aggregating records reshaping tables basic time-series work For many analytics tasks, pandas is where the real project begins.\nNumPy NumPy provides the array operations that power much of the scientific Python stack. Even if you do not use it directly every day, you will benefit from understanding vectors, matrices, broadcasting, and numerical operations.\n2. Machine learning scikit-learn scikit-learn remains one of the best libraries for classical machine learning. It is practical, well-documented, and ideal for:\nclassification regression clustering preprocessing model selection evaluation workflows If someone wants to learn modeling fundamentals, this is still one of the best places to start. 🤖\ngensim gensim is useful for topic modeling, document similarity, and some NLP workflows involving semantic structure in text collections.\n3. Natural language processing NLTK NLTK is still a good teaching library for learning the basics of tokenization, corpora, linguistic structure, and introductory NLP workflows.\nOther NLP libraries In practice, modern NLP work often also includes libraries such as spaCy, transformer tooling, and production-oriented text pipelines. But NLTK still has value when you want to understand the foundations.\n4. Visualization Matplotlib Matplotlib remains foundational. It may not be the prettiest tool by default, but it gives you control and sits under many other Python visualization workflows.\nseaborn seaborn is useful when you want statistical visualizations with less boilerplate and better defaults.\nBokeh Bokeh is useful for interactive browser-based plots and data apps, especially when you want something richer than static figures.\n5. Scientific and numerical computing SciPy SciPy builds on NumPy and helps with scientific computing tasks such as optimization, interpolation, linear algebra, and signal processing.\n6. Data engineering and larger-scale workflows Some of the older tools from my original post still make sense conceptually, but the ecosystem has evolved.\nUseful categories today include:\nworkflow orchestration distributed computation storage and file formats database connectivity Dask Dask is a practical library for parallel and larger-than-memory data workflows in Python. It is helpful when pandas alone starts to feel constrained.\nPyMongo If you work with MongoDB from Python, PyMongo remains the standard connector.\nh5py Useful when dealing with structured scientific datasets stored in HDF5 format.\nWorkflow tooling My original post mentioned tools like Luigi, which was a reasonable choice in that era. Today, teams often think in terms of broader orchestration ecosystems, but the core need is the same: define dependencies, run tasks reliably, and manage data workflows at scale. ⚙️\nHow to think about this list in 2026 Do not try to learn every library at once. A better path is:\nlearn pandas and NumPy add matplotlib or seaborn learn scikit-learn branch into NLP, visualization, or data engineering depending on your work The right stack depends on what you actually want to build.\nFinal thought Python is powerful because the ecosystem lets you move from exploration to production with surprisingly little friction. The key is not collecting tools. It is choosing the smallest useful set that helps you solve real problems. 📈\n",
+  "wordCount" : "620",
+  "inLanguage": "en",
+  "datePublished": "2017-03-14T00:00:00Z",
+  "dateModified": "2017-03-14T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anurag Chaudhary",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AnuragSinghChaudhary.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header sticky-header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AnuragSinghChaudhary.github.io/" accesskey="h" title="Anurag Chaudhary (Alt + H)">Anurag Chaudhary</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AnuragSinghChaudhary.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://AnuragSinghChaudhary.github.io/blog/">Blogs</a></div>
+    <h1 class="post-title">
+      Python Libraries for Data Science
+    </h1>
+    <div class="post-description">
+      A refreshed legacy guide to useful Python libraries for data analysis, machine learning, visualization, and data engineering workflows.
+    </div>
+    <div class="post-meta">
+
+
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">‎ Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#1-data-manipulation-and-analysis" aria-label="1. Data manipulation and analysis">1. Data manipulation and analysis</a><ul>
+                        
+                <li>
+                    <a href="#pandas" aria-label="pandas"><code>pandas</code></a></li>
+                <li>
+                    <a href="#numpy" aria-label="NumPy"><code>NumPy</code></a></li></ul>
+                </li>
+                <li>
+                    <a href="#2-machine-learning" aria-label="2. Machine learning">2. Machine learning</a><ul>
+                        
+                <li>
+                    <a href="#scikit-learn" aria-label="scikit-learn"><code>scikit-learn</code></a></li>
+                <li>
+                    <a href="#gensim" aria-label="gensim"><code>gensim</code></a></li></ul>
+                </li>
+                <li>
+                    <a href="#3-natural-language-processing" aria-label="3. Natural language processing">3. Natural language processing</a><ul>
+                        
+                <li>
+                    <a href="#nltk" aria-label="NLTK"><code>NLTK</code></a></li>
+                <li>
+                    <a href="#other-nlp-libraries" aria-label="Other NLP libraries">Other NLP libraries</a></li></ul>
+                </li>
+                <li>
+                    <a href="#4-visualization" aria-label="4. Visualization">4. Visualization</a><ul>
+                        
+                <li>
+                    <a href="#matplotlib" aria-label="Matplotlib"><code>Matplotlib</code></a></li>
+                <li>
+                    <a href="#seaborn" aria-label="seaborn"><code>seaborn</code></a></li>
+                <li>
+                    <a href="#bokeh" aria-label="Bokeh"><code>Bokeh</code></a></li></ul>
+                </li>
+                <li>
+                    <a href="#5-scientific-and-numerical-computing" aria-label="5. Scientific and numerical computing">5. Scientific and numerical computing</a><ul>
+                        
+                <li>
+                    <a href="#scipy" aria-label="SciPy"><code>SciPy</code></a></li></ul>
+                </li>
+                <li>
+                    <a href="#6-data-engineering-and-larger-scale-workflows" aria-label="6. Data engineering and larger-scale workflows">6. Data engineering and larger-scale workflows</a><ul>
+                        
+                <li>
+                    <a href="#dask" aria-label="Dask"><code>Dask</code></a></li>
+                <li>
+                    <a href="#pymongo" aria-label="PyMongo"><code>PyMongo</code></a></li>
+                <li>
+                    <a href="#h5py" aria-label="h5py"><code>h5py</code></a></li>
+                <li>
+                    <a href="#workflow-tooling" aria-label="Workflow tooling">Workflow tooling</a></li></ul>
+                </li>
+                <li>
+                    <a href="#how-to-think-about-this-list-in-2026" aria-label="How to think about this list in 2026">How to think about this list in 2026</a></li>
+                <li>
+                    <a href="#final-thought" aria-label="Final thought">Final thought</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><blockquote>
+<p>Editor&rsquo;s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.</p>
+</blockquote>
+<p>The Python ecosystem is one of the main reasons data work became so accessible. You can move from cleaning messy tables to training models, building dashboards, or scaling workflows without switching languages every few hours.</p>
+<p>That does not mean every library matters equally. The useful question in 2026 is not “what are all the libraries?” It is “which libraries are worth learning first, and what are they actually good for?” 🐍</p>
+<h2 id="1-data-manipulation-and-analysis">1. Data manipulation and analysis<a hidden class="anchor" aria-hidden="true" href="#1-data-manipulation-and-analysis">#</a></h2>
+<h3 id="pandas"><code>pandas</code><a hidden class="anchor" aria-hidden="true" href="#pandas">#</a></h3>
+<p>If you work with tabular data, <code>pandas</code> is still one of the first libraries to learn.</p>
+<p>It is useful for:</p>
+<ul>
+<li>reading and writing files</li>
+<li>cleaning data</li>
+<li>joining datasets</li>
+<li>grouping and aggregating records</li>
+<li>reshaping tables</li>
+<li>basic time-series work</li>
+</ul>
+<p>For many analytics tasks, <code>pandas</code> is where the real project begins.</p>
+<h3 id="numpy"><code>NumPy</code><a hidden class="anchor" aria-hidden="true" href="#numpy">#</a></h3>
+<p><code>NumPy</code> provides the array operations that power much of the scientific Python stack. Even if you do not use it directly every day, you will benefit from understanding vectors, matrices, broadcasting, and numerical operations.</p>
+<h2 id="2-machine-learning">2. Machine learning<a hidden class="anchor" aria-hidden="true" href="#2-machine-learning">#</a></h2>
+<h3 id="scikit-learn"><code>scikit-learn</code><a hidden class="anchor" aria-hidden="true" href="#scikit-learn">#</a></h3>
+<p><code>scikit-learn</code> remains one of the best libraries for classical machine learning. It is practical, well-documented, and ideal for:</p>
+<ul>
+<li>classification</li>
+<li>regression</li>
+<li>clustering</li>
+<li>preprocessing</li>
+<li>model selection</li>
+<li>evaluation workflows</li>
+</ul>
+<p>If someone wants to learn modeling fundamentals, this is still one of the best places to start. 🤖</p>
+<h3 id="gensim"><code>gensim</code><a hidden class="anchor" aria-hidden="true" href="#gensim">#</a></h3>
+<p><code>gensim</code> is useful for topic modeling, document similarity, and some NLP workflows involving semantic structure in text collections.</p>
+<h2 id="3-natural-language-processing">3. Natural language processing<a hidden class="anchor" aria-hidden="true" href="#3-natural-language-processing">#</a></h2>
+<h3 id="nltk"><code>NLTK</code><a hidden class="anchor" aria-hidden="true" href="#nltk">#</a></h3>
+<p><code>NLTK</code> is still a good teaching library for learning the basics of tokenization, corpora, linguistic structure, and introductory NLP workflows.</p>
+<h3 id="other-nlp-libraries">Other NLP libraries<a hidden class="anchor" aria-hidden="true" href="#other-nlp-libraries">#</a></h3>
+<p>In practice, modern NLP work often also includes libraries such as <code>spaCy</code>, transformer tooling, and production-oriented text pipelines. But <code>NLTK</code> still has value when you want to understand the foundations.</p>
+<h2 id="4-visualization">4. Visualization<a hidden class="anchor" aria-hidden="true" href="#4-visualization">#</a></h2>
+<h3 id="matplotlib"><code>Matplotlib</code><a hidden class="anchor" aria-hidden="true" href="#matplotlib">#</a></h3>
+<p><code>Matplotlib</code> remains foundational. It may not be the prettiest tool by default, but it gives you control and sits under many other Python visualization workflows.</p>
+<h3 id="seaborn"><code>seaborn</code><a hidden class="anchor" aria-hidden="true" href="#seaborn">#</a></h3>
+<p><code>seaborn</code> is useful when you want statistical visualizations with less boilerplate and better defaults.</p>
+<h3 id="bokeh"><code>Bokeh</code><a hidden class="anchor" aria-hidden="true" href="#bokeh">#</a></h3>
+<p><code>Bokeh</code> is useful for interactive browser-based plots and data apps, especially when you want something richer than static figures.</p>
+<h2 id="5-scientific-and-numerical-computing">5. Scientific and numerical computing<a hidden class="anchor" aria-hidden="true" href="#5-scientific-and-numerical-computing">#</a></h2>
+<h3 id="scipy"><code>SciPy</code><a hidden class="anchor" aria-hidden="true" href="#scipy">#</a></h3>
+<p><code>SciPy</code> builds on NumPy and helps with scientific computing tasks such as optimization, interpolation, linear algebra, and signal processing.</p>
+<h2 id="6-data-engineering-and-larger-scale-workflows">6. Data engineering and larger-scale workflows<a hidden class="anchor" aria-hidden="true" href="#6-data-engineering-and-larger-scale-workflows">#</a></h2>
+<p>Some of the older tools from my original post still make sense conceptually, but the ecosystem has evolved.</p>
+<p>Useful categories today include:</p>
+<ul>
+<li>workflow orchestration</li>
+<li>distributed computation</li>
+<li>storage and file formats</li>
+<li>database connectivity</li>
+</ul>
+<h3 id="dask"><code>Dask</code><a hidden class="anchor" aria-hidden="true" href="#dask">#</a></h3>
+<p><code>Dask</code> is a practical library for parallel and larger-than-memory data workflows in Python. It is helpful when pandas alone starts to feel constrained.</p>
+<h3 id="pymongo"><code>PyMongo</code><a hidden class="anchor" aria-hidden="true" href="#pymongo">#</a></h3>
+<p>If you work with MongoDB from Python, <code>PyMongo</code> remains the standard connector.</p>
+<h3 id="h5py"><code>h5py</code><a hidden class="anchor" aria-hidden="true" href="#h5py">#</a></h3>
+<p>Useful when dealing with structured scientific datasets stored in HDF5 format.</p>
+<h3 id="workflow-tooling">Workflow tooling<a hidden class="anchor" aria-hidden="true" href="#workflow-tooling">#</a></h3>
+<p>My original post mentioned tools like <code>Luigi</code>, which was a reasonable choice in that era. Today, teams often think in terms of broader orchestration ecosystems, but the core need is the same: define dependencies, run tasks reliably, and manage data workflows at scale. ⚙️</p>
+<h2 id="how-to-think-about-this-list-in-2026">How to think about this list in 2026<a hidden class="anchor" aria-hidden="true" href="#how-to-think-about-this-list-in-2026">#</a></h2>
+<p>Do not try to learn every library at once. A better path is:</p>
+<ol>
+<li>learn <code>pandas</code> and <code>NumPy</code></li>
+<li>add <code>matplotlib</code> or <code>seaborn</code></li>
+<li>learn <code>scikit-learn</code></li>
+<li>branch into NLP, visualization, or data engineering depending on your work</li>
+</ol>
+<p>The right stack depends on what you actually want to build.</p>
+<h2 id="final-thought">Final thought<a hidden class="anchor" aria-hidden="true" href="#final-thought">#</a></h2>
+<p>Python is powerful because the ecosystem lets you move from exploration to production with surprisingly little friction. The key is not collecting tools. It is choosing the smallest useful set that helps you solve real problems. 📈</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/python/">Python</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/data-science/">Data Science</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/machine-learning/">Machine Learning</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/visualization/">Visualization</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/libraries/">Libraries</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 <a href="https://AnuragSinghChaudhary.github.io/">Anurag Chaudhary</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

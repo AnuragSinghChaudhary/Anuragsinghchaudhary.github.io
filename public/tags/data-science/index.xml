@@ -16,5 +16,23 @@
       <description>A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction.</description>
     </item>
     
+    <item>
+      <title>Python Libraries for Data Science</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/</link>
+      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/</guid>
+      <description>A refreshed legacy guide to useful Python libraries for data analysis, machine learning, visualization, and data engineering workflows.</description>
+    </item>
+    
+    <item>
+      <title>From IPython Notebook to Jupyter</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/</link>
+      <pubDate>Sat, 16 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/</guid>
+      <description>A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter.</description>
+    </item>
+    
   </channel>
 </rss>

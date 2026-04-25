@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>From IPython Notebook to Jupyter | Anurag Chaudhary</title>
+<meta name="keywords" content="Jupyter, IPython, Python, Notebooks, Data Science">
+<meta name="description" content="A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter.">
+<meta name="author" content="">
+<link rel="canonical" href="https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.296af7cf9237b6b7ac9414e14faee9a2d1423e2794fb24bebbe524dbda37e86d.css" integrity="sha256-KWr3z5I3treslBThT67potFCPieU&#43;yS&#43;u&#43;Uk29o36G0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AnuragSinghChaudhary.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AnuragSinghChaudhary.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AnuragSinghChaudhary.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AnuragSinghChaudhary.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AnuragSinghChaudhary.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="From IPython Notebook to Jupyter" />
+<meta property="og:description" content="A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2016-07-16T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2016-07-16T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="From IPython Notebook to Jupyter"/>
+<meta name="twitter:description" content="A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "From IPython Notebook to Jupyter",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "From IPython Notebook to Jupyter",
+  "name": "From IPython Notebook to Jupyter",
+  "description": "A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter.",
+  "keywords": [
+    "Jupyter", "IPython", "Python", "Notebooks", "Data Science"
+  ],
+  "articleBody": " Editor’s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.\nNotebook-based computing changed how many of us learn, explore, and communicate technical work. It made it easier to mix code, explanation, output, and visuals in a single document.\nThat is why notebooks became such a natural fit for analytics, teaching, research, and experimentation. 📓\nWhat a notebook actually is A notebook is not just a code editor. It is a document that combines:\nexecutable code written explanation tables and charts images or rich outputs interactive exploration That combination is why notebooks are so useful. They let you show both the process and the result.\nIPython Notebook vs Jupyter Notebook When I first wrote about this topic, many people still used the phrase IPython Notebook. Today, the broader and more accurate frame is Project Jupyter.\nHistorically:\nIPython started as a Python-focused interactive computing environment notebook workflows then expanded into a broader multi-language ecosystem that broader ecosystem became Project Jupyter So if you hear older references to IPython Notebook, they are part of the same lineage. In current practice, Jupyter is the more useful umbrella term.\nWhy notebooks became so popular Notebooks work well because they are good at three things at once:\n1. Exploration You can test ideas quickly, inspect intermediate outputs, and iterate without building a full application.\n2. Communication You can explain what the code is doing in plain language right next to the output.\n3. Sharing A notebook is easier to review than a loose pile of scripts and screenshots. It gives structure to the work.\nNotebooks are not only for Python This was one of the points I cared about in the original version of this article, and it is still true.\nNotebooks are not limited to Python. The broader Jupyter ecosystem supports many languages through kernels, including R, Julia, and others.\nThat is one reason notebooks became such a durable interface for interactive computing.\nWhy notebooks still matter in 2026 The tooling has evolved, but the core use cases remain:\nprototyping data workflows teaching and learning documenting analysis experimenting with models sharing reproducible work Even when projects eventually move into production systems, notebooks are often where the thinking starts.\nA practical caution Notebooks are excellent for exploration, but they are not automatically the same thing as production-ready software.\nThat distinction matters. A useful notebook can become the seed of a project, but production systems still need engineering discipline, testing, versioning, and deployment structure.\nFinal thought The value of notebooks is not just that they run code. It is that they make technical reasoning visible.\nThat is why they became so central to analytics and data science, and why they still matter now. ✨\n",
+  "wordCount" : "459",
+  "inLanguage": "en",
+  "datePublished": "2016-07-16T00:00:00Z",
+  "dateModified": "2016-07-16T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anurag Chaudhary",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AnuragSinghChaudhary.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header sticky-header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AnuragSinghChaudhary.github.io/" accesskey="h" title="Anurag Chaudhary (Alt + H)">Anurag Chaudhary</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AnuragSinghChaudhary.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://AnuragSinghChaudhary.github.io/blog/">Blogs</a></div>
+    <h1 class="post-title">
+      From IPython Notebook to Jupyter
+    </h1>
+    <div class="post-description">
+      A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter.
+    </div>
+    <div class="post-meta">
+
+
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">‎ Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#what-a-notebook-actually-is" aria-label="What a notebook actually is">What a notebook actually is</a></li>
+                <li>
+                    <a href="#ipython-notebook-vs-jupyter-notebook" aria-label="IPython Notebook vs Jupyter Notebook">IPython Notebook vs Jupyter Notebook</a></li>
+                <li>
+                    <a href="#why-notebooks-became-so-popular" aria-label="Why notebooks became so popular">Why notebooks became so popular</a><ul>
+                        
+                <li>
+                    <a href="#1-exploration" aria-label="1. Exploration">1. Exploration</a></li>
+                <li>
+                    <a href="#2-communication" aria-label="2. Communication">2. Communication</a></li>
+                <li>
+                    <a href="#3-sharing" aria-label="3. Sharing">3. Sharing</a></li></ul>
+                </li>
+                <li>
+                    <a href="#notebooks-are-not-only-for-python" aria-label="Notebooks are not only for Python">Notebooks are not only for Python</a></li>
+                <li>
+                    <a href="#why-notebooks-still-matter-in-2026" aria-label="Why notebooks still matter in 2026">Why notebooks still matter in 2026</a></li>
+                <li>
+                    <a href="#a-practical-caution" aria-label="A practical caution">A practical caution</a></li>
+                <li>
+                    <a href="#final-thought" aria-label="Final thought">Final thought</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><blockquote>
+<p>Editor&rsquo;s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.</p>
+</blockquote>
+<p>Notebook-based computing changed how many of us learn, explore, and communicate technical work. It made it easier to mix code, explanation, output, and visuals in a single document.</p>
+<p>That is why notebooks became such a natural fit for analytics, teaching, research, and experimentation. 📓</p>
+<h2 id="what-a-notebook-actually-is">What a notebook actually is<a hidden class="anchor" aria-hidden="true" href="#what-a-notebook-actually-is">#</a></h2>
+<p>A notebook is not just a code editor. It is a document that combines:</p>
+<ul>
+<li>executable code</li>
+<li>written explanation</li>
+<li>tables and charts</li>
+<li>images or rich outputs</li>
+<li>interactive exploration</li>
+</ul>
+<p>That combination is why notebooks are so useful. They let you show both the process and the result.</p>
+<h2 id="ipython-notebook-vs-jupyter-notebook">IPython Notebook vs Jupyter Notebook<a hidden class="anchor" aria-hidden="true" href="#ipython-notebook-vs-jupyter-notebook">#</a></h2>
+<p>When I first wrote about this topic, many people still used the phrase <strong>IPython Notebook</strong>. Today, the broader and more accurate frame is <strong>Project Jupyter</strong>.</p>
+<p>Historically:</p>
+<ul>
+<li>IPython started as a Python-focused interactive computing environment</li>
+<li>notebook workflows then expanded into a broader multi-language ecosystem</li>
+<li>that broader ecosystem became Project Jupyter</li>
+</ul>
+<p>So if you hear older references to IPython Notebook, they are part of the same lineage. In current practice, Jupyter is the more useful umbrella term.</p>
+<h2 id="why-notebooks-became-so-popular">Why notebooks became so popular<a hidden class="anchor" aria-hidden="true" href="#why-notebooks-became-so-popular">#</a></h2>
+<p>Notebooks work well because they are good at three things at once:</p>
+<h3 id="1-exploration">1. Exploration<a hidden class="anchor" aria-hidden="true" href="#1-exploration">#</a></h3>
+<p>You can test ideas quickly, inspect intermediate outputs, and iterate without building a full application.</p>
+<h3 id="2-communication">2. Communication<a hidden class="anchor" aria-hidden="true" href="#2-communication">#</a></h3>
+<p>You can explain what the code is doing in plain language right next to the output.</p>
+<h3 id="3-sharing">3. Sharing<a hidden class="anchor" aria-hidden="true" href="#3-sharing">#</a></h3>
+<p>A notebook is easier to review than a loose pile of scripts and screenshots. It gives structure to the work.</p>
+<h2 id="notebooks-are-not-only-for-python">Notebooks are not only for Python<a hidden class="anchor" aria-hidden="true" href="#notebooks-are-not-only-for-python">#</a></h2>
+<p>This was one of the points I cared about in the original version of this article, and it is still true.</p>
+<p>Notebooks are not limited to Python. The broader Jupyter ecosystem supports many languages through kernels, including R, Julia, and others.</p>
+<p>That is one reason notebooks became such a durable interface for interactive computing.</p>
+<h2 id="why-notebooks-still-matter-in-2026">Why notebooks still matter in 2026<a hidden class="anchor" aria-hidden="true" href="#why-notebooks-still-matter-in-2026">#</a></h2>
+<p>The tooling has evolved, but the core use cases remain:</p>
+<ul>
+<li>prototyping data workflows</li>
+<li>teaching and learning</li>
+<li>documenting analysis</li>
+<li>experimenting with models</li>
+<li>sharing reproducible work</li>
+</ul>
+<p>Even when projects eventually move into production systems, notebooks are often where the thinking starts.</p>
+<h2 id="a-practical-caution">A practical caution<a hidden class="anchor" aria-hidden="true" href="#a-practical-caution">#</a></h2>
+<p>Notebooks are excellent for exploration, but they are not automatically the same thing as production-ready software.</p>
+<p>That distinction matters. A useful notebook can become the seed of a project, but production systems still need engineering discipline, testing, versioning, and deployment structure.</p>
+<h2 id="final-thought">Final thought<a hidden class="anchor" aria-hidden="true" href="#final-thought">#</a></h2>
+<p>The value of notebooks is not just that they run code. It is that they make technical reasoning visible.</p>
+<p>That is why they became so central to analytics and data science, and why they still matter now. ✨</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/jupyter/">Jupyter</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/ipython/">IPython</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/python/">Python</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/notebooks/">Notebooks</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/data-science/">Data Science</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 <a href="https://AnuragSinghChaudhary.github.io/">Anurag Chaudhary</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

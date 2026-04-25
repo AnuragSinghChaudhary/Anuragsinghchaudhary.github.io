@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Jupyter on Anurag Chaudhary</title>
+    <link>https://AnuragSinghChaudhary.github.io/tags/jupyter/</link>
+    <description>Recent content in Jupyter on Anurag Chaudhary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From IPython Notebook to Jupyter</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/</link>
+      <pubDate>Sat, 16 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/</guid>
+      <description>A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter.</description>
+    </item>
+    
+  </channel>
+</rss>

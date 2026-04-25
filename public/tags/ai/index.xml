@@ -88,5 +88,14 @@
       <description>A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction.</description>
     </item>
     
+    <item>
+      <title>NLTK and Natural Language Processing in Python</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/</link>
+      <pubDate>Fri, 04 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/</guid>
+      <description>A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text.</description>
+    </item>
+    
   </channel>
 </rss>

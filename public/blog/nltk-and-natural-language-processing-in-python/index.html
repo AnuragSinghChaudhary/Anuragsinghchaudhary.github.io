@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>NLTK and Natural Language Processing in Python | Anurag Chaudhary</title>
+<meta name="keywords" content="NLP, Python, NLTK, Text Processing, AI">
+<meta name="description" content="A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text.">
+<meta name="author" content="">
+<link rel="canonical" href="https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.296af7cf9237b6b7ac9414e14faee9a2d1423e2794fb24bebbe524dbda37e86d.css" integrity="sha256-KWr3z5I3treslBThT67potFCPieU&#43;yS&#43;u&#43;Uk29o36G0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AnuragSinghChaudhary.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AnuragSinghChaudhary.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AnuragSinghChaudhary.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AnuragSinghChaudhary.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AnuragSinghChaudhary.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="NLTK and Natural Language Processing in Python" />
+<meta property="og:description" content="A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2016-11-04T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2016-11-04T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NLTK and Natural Language Processing in Python"/>
+<meta name="twitter:description" content="A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "NLTK and Natural Language Processing in Python",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "NLTK and Natural Language Processing in Python",
+  "name": "NLTK and Natural Language Processing in Python",
+  "description": "A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text.",
+  "keywords": [
+    "NLP", "Python", "NLTK", "Text Processing", "AI"
+  ],
+  "articleBody": " Editor’s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.\nWe generate text constantly: messages, tweets, articles, support tickets, comments, and documents. That means a large part of useful data work involves language rather than clean numerical tables.\nThis is where natural language processing, or NLP, becomes useful.\nWhat NLP is Natural language processing is the study and engineering of systems that work with human language. In practical terms, that often means turning raw text into something a program can analyze:\nwords sentences topics entities categories semantic relationships Text feels simple when humans read it, but it is messy for machines. That is why NLP is such a rich field. 🧠\nWhere NLTK fits NLTK, short for Natural Language Toolkit, is one of the classic Python libraries for learning NLP.\nIt is especially useful for:\ntokenization corpora exploration stemming and lemmatization tagging parsing introductory classification workflows In production systems, teams may use other libraries depending on the task, but NLTK is still valuable because it helps you understand the basic building blocks clearly.\nImportant NLP building blocks Tokenization Tokenization means splitting text into smaller pieces.\nThat can happen at different levels:\nword tokenization sentence tokenization This matters because many downstream NLP tasks depend on how text is segmented.\nCorpora A corpus is a body of text used for analysis. It might be a news archive, a collection of speeches, a set of product reviews, or a dataset of support conversations.\nLexicon A lexicon is essentially a structured vocabulary. It becomes useful when words change meaning depending on context, tone, or domain.\nWhy naive rules are not enough It is tempting to think text can be split with a few manual rules, such as “every period marks the end of a sentence.” But language breaks those shortcuts constantly.\nFor example:\nabbreviations can confuse sentence boundaries punctuation can be inconsistent names and titles can look like sentence endings That is why dedicated NLP tooling matters. Human language is full of exceptions.\nWhat beginners can learn from NLTK NLTK is a great way to learn the early layers of text processing:\nhow to break text into units how to inspect text corpora how to count words and patterns how to prepare language data for further analysis Even if your later work uses different libraries, this foundation is still useful.\nWhy this article still matters The NLP landscape in 2026 is obviously much broader than it was when I first wrote about this topic. We now think in terms of embeddings, transformers, retrieval systems, and AI-assisted interfaces far more often.\nBut those systems still depend on the fundamentals:\nwhat text is how it is segmented how meaning is represented how structure is extracted That is why introductory NLP concepts still matter. ✍️\nFinal thought If you want to understand language-based AI properly, start with the basics. NLTK remains one of the easiest ways to build intuition for how text is processed before you move into more advanced modern tooling.\n",
+  "wordCount" : "507",
+  "inLanguage": "en",
+  "datePublished": "2016-11-04T00:00:00Z",
+  "dateModified": "2016-11-04T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anurag Chaudhary",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AnuragSinghChaudhary.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header sticky-header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AnuragSinghChaudhary.github.io/" accesskey="h" title="Anurag Chaudhary (Alt + H)">Anurag Chaudhary</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AnuragSinghChaudhary.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://AnuragSinghChaudhary.github.io/blog/">Blogs</a></div>
+    <h1 class="post-title">
+      NLTK and Natural Language Processing in Python
+    </h1>
+    <div class="post-description">
+      A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text.
+    </div>
+    <div class="post-meta">
+
+
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">‎ Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#what-nlp-is" aria-label="What NLP is">What NLP is</a></li>
+                <li>
+                    <a href="#where-nltk-fits" aria-label="Where NLTK fits">Where NLTK fits</a></li>
+                <li>
+                    <a href="#important-nlp-building-blocks" aria-label="Important NLP building blocks">Important NLP building blocks</a><ul>
+                        
+                <li>
+                    <a href="#tokenization" aria-label="Tokenization">Tokenization</a></li>
+                <li>
+                    <a href="#corpora" aria-label="Corpora">Corpora</a></li>
+                <li>
+                    <a href="#lexicon" aria-label="Lexicon">Lexicon</a></li></ul>
+                </li>
+                <li>
+                    <a href="#why-naive-rules-are-not-enough" aria-label="Why naive rules are not enough">Why naive rules are not enough</a></li>
+                <li>
+                    <a href="#what-beginners-can-learn-from-nltk" aria-label="What beginners can learn from NLTK">What beginners can learn from NLTK</a></li>
+                <li>
+                    <a href="#why-this-article-still-matters" aria-label="Why this article still matters">Why this article still matters</a></li>
+                <li>
+                    <a href="#final-thought" aria-label="Final thought">Final thought</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><blockquote>
+<p>Editor&rsquo;s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.</p>
+</blockquote>
+<p>We generate text constantly: messages, tweets, articles, support tickets, comments, and documents. That means a large part of useful data work involves language rather than clean numerical tables.</p>
+<p>This is where natural language processing, or <strong>NLP</strong>, becomes useful.</p>
+<h2 id="what-nlp-is">What NLP is<a hidden class="anchor" aria-hidden="true" href="#what-nlp-is">#</a></h2>
+<p>Natural language processing is the study and engineering of systems that work with human language. In practical terms, that often means turning raw text into something a program can analyze:</p>
+<ul>
+<li>words</li>
+<li>sentences</li>
+<li>topics</li>
+<li>entities</li>
+<li>categories</li>
+<li>semantic relationships</li>
+</ul>
+<p>Text feels simple when humans read it, but it is messy for machines. That is why NLP is such a rich field. 🧠</p>
+<h2 id="where-nltk-fits">Where NLTK fits<a hidden class="anchor" aria-hidden="true" href="#where-nltk-fits">#</a></h2>
+<p><code>NLTK</code>, short for <strong>Natural Language Toolkit</strong>, is one of the classic Python libraries for learning NLP.</p>
+<p>It is especially useful for:</p>
+<ul>
+<li>tokenization</li>
+<li>corpora exploration</li>
+<li>stemming and lemmatization</li>
+<li>tagging</li>
+<li>parsing</li>
+<li>introductory classification workflows</li>
+</ul>
+<p>In production systems, teams may use other libraries depending on the task, but NLTK is still valuable because it helps you understand the basic building blocks clearly.</p>
+<h2 id="important-nlp-building-blocks">Important NLP building blocks<a hidden class="anchor" aria-hidden="true" href="#important-nlp-building-blocks">#</a></h2>
+<h3 id="tokenization">Tokenization<a hidden class="anchor" aria-hidden="true" href="#tokenization">#</a></h3>
+<p>Tokenization means splitting text into smaller pieces.</p>
+<p>That can happen at different levels:</p>
+<ul>
+<li>word tokenization</li>
+<li>sentence tokenization</li>
+</ul>
+<p>This matters because many downstream NLP tasks depend on how text is segmented.</p>
+<h3 id="corpora">Corpora<a hidden class="anchor" aria-hidden="true" href="#corpora">#</a></h3>
+<p>A corpus is a body of text used for analysis. It might be a news archive, a collection of speeches, a set of product reviews, or a dataset of support conversations.</p>
+<h3 id="lexicon">Lexicon<a hidden class="anchor" aria-hidden="true" href="#lexicon">#</a></h3>
+<p>A lexicon is essentially a structured vocabulary. It becomes useful when words change meaning depending on context, tone, or domain.</p>
+<h2 id="why-naive-rules-are-not-enough">Why naive rules are not enough<a hidden class="anchor" aria-hidden="true" href="#why-naive-rules-are-not-enough">#</a></h2>
+<p>It is tempting to think text can be split with a few manual rules, such as “every period marks the end of a sentence.” But language breaks those shortcuts constantly.</p>
+<p>For example:</p>
+<ul>
+<li>abbreviations can confuse sentence boundaries</li>
+<li>punctuation can be inconsistent</li>
+<li>names and titles can look like sentence endings</li>
+</ul>
+<p>That is why dedicated NLP tooling matters. Human language is full of exceptions.</p>
+<h2 id="what-beginners-can-learn-from-nltk">What beginners can learn from NLTK<a hidden class="anchor" aria-hidden="true" href="#what-beginners-can-learn-from-nltk">#</a></h2>
+<p>NLTK is a great way to learn the early layers of text processing:</p>
+<ul>
+<li>how to break text into units</li>
+<li>how to inspect text corpora</li>
+<li>how to count words and patterns</li>
+<li>how to prepare language data for further analysis</li>
+</ul>
+<p>Even if your later work uses different libraries, this foundation is still useful.</p>
+<h2 id="why-this-article-still-matters">Why this article still matters<a hidden class="anchor" aria-hidden="true" href="#why-this-article-still-matters">#</a></h2>
+<p>The NLP landscape in 2026 is obviously much broader than it was when I first wrote about this topic. We now think in terms of embeddings, transformers, retrieval systems, and AI-assisted interfaces far more often.</p>
+<p>But those systems still depend on the fundamentals:</p>
+<ul>
+<li>what text is</li>
+<li>how it is segmented</li>
+<li>how meaning is represented</li>
+<li>how structure is extracted</li>
+</ul>
+<p>That is why introductory NLP concepts still matter. ✍️</p>
+<h2 id="final-thought">Final thought<a hidden class="anchor" aria-hidden="true" href="#final-thought">#</a></h2>
+<p>If you want to understand language-based AI properly, start with the basics. NLTK remains one of the easiest ways to build intuition for how text is processed before you move into more advanced modern tooling.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/nlp/">NLP</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/python/">Python</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/nltk/">NLTK</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/text-processing/">Text Processing</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/ai/">AI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 <a href="https://AnuragSinghChaudhary.github.io/">Anurag Chaudhary</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

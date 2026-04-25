@@ -62,6 +62,51 @@
     </item>
     
     <item>
+      <title>Python Libraries for Data Science</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/</link>
+      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/</guid>
+      <description>A refreshed legacy guide to useful Python libraries for data analysis, machine learning, visualization, and data engineering workflows.</description>
+    </item>
+    
+    <item>
+      <title>From Google Data Studio to Looker Studio</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/from-google-data-studio-to-looker-studio/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/from-google-data-studio-to-looker-studio/</guid>
+      <description>A refreshed legacy dashboarding article on how Google’s reporting tool evolved into Looker Studio and why it still matters.</description>
+    </item>
+    
+    <item>
+      <title>CAP Theorem Explained</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/cap-theorem-explained/</link>
+      <pubDate>Fri, 11 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/cap-theorem-explained/</guid>
+      <description>A refreshed legacy explainer on consistency, availability, and partition tolerance in distributed systems.</description>
+    </item>
+    
+    <item>
+      <title>NLTK and Natural Language Processing in Python</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/</link>
+      <pubDate>Fri, 04 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/</guid>
+      <description>A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text.</description>
+    </item>
+    
+    <item>
+      <title>From IPython Notebook to Jupyter</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/</link>
+      <pubDate>Sat, 16 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/</guid>
+      <description>A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter.</description>
+    </item>
+    
+    <item>
       <title>Public Datasets for Data Analysis</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/public-datasets-for-data-analysis/</link>
       <pubDate>Tue, 12 Jul 2016 00:00:00 +0000</pubDate>

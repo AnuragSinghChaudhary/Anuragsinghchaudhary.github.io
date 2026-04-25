@@ -5,7 +5,8 @@
     <link>https://AnuragSinghChaudhary.github.io/tags/nlp/</link>
     <description>Recent content in NLP on Anurag Chaudhary</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://AnuragSinghChaudhary.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Nov 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Junior Data Scientist</title>
       <link>https://AnuragSinghChaudhary.github.io/experience/buyerassist/</link>
@@ -13,6 +14,15 @@
       
       <guid>https://AnuragSinghChaudhary.github.io/experience/buyerassist/</guid>
       <description>DolphinChat ai | Gurugram, India 🇮🇳</description>
+    </item>
+    
+    <item>
+      <title>NLTK and Natural Language Processing in Python</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/</link>
+      <pubDate>Fri, 04 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/</guid>
+      <description>A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text.</description>
     </item>
     
   </channel>

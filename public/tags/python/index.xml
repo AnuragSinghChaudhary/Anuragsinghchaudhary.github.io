@@ -5,7 +5,8 @@
     <link>https://AnuragSinghChaudhary.github.io/tags/python/</link>
     <description>Recent content in Python on Anurag Chaudhary</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://AnuragSinghChaudhary.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automated Image Captioning (Bachelor Thesis)</title>
       <link>https://AnuragSinghChaudhary.github.io/projects/automated-image-captioning/</link>
@@ -67,6 +68,33 @@
       
       <guid>https://AnuragSinghChaudhary.github.io/experience/16bit/</guid>
       <description>JunoTerra | New Delhi, India 🇮🇳</description>
+    </item>
+    
+    <item>
+      <title>Python Libraries for Data Science</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/</link>
+      <pubDate>Tue, 14 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/</guid>
+      <description>A refreshed legacy guide to useful Python libraries for data analysis, machine learning, visualization, and data engineering workflows.</description>
+    </item>
+    
+    <item>
+      <title>NLTK and Natural Language Processing in Python</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/</link>
+      <pubDate>Fri, 04 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/</guid>
+      <description>A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text.</description>
+    </item>
+    
+    <item>
+      <title>From IPython Notebook to Jupyter</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/</link>
+      <pubDate>Sat, 16 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/</guid>
+      <description>A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter.</description>
     </item>
     
   </channel>

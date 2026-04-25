@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reporting on Anurag Chaudhary</title>
+    <link>https://AnuragSinghChaudhary.github.io/tags/reporting/</link>
+    <description>Recent content in Reporting on Anurag Chaudhary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/reporting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>From Google Data Studio to Looker Studio</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/from-google-data-studio-to-looker-studio/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/from-google-data-studio-to-looker-studio/</guid>
+      <description>A refreshed legacy dashboarding article on how Google’s reporting tool evolved into Looker Studio and why it still matters.</description>
+    </item>
+    
+  </channel>
+</rss>

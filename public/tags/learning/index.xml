@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Learning on Anurag Chaudhary</title>
+    <link>https://AnuragSinghChaudhary.github.io/tags/learning/</link>
+    <description>Recent content in Learning on Anurag Chaudhary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 04 Jul 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Science Resources I Still Recommend</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</link>
+      <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</guid>
+      <description>A refreshed legacy resource guide for learning data science through better tools, documentation, and project habits.</description>
+    </item>
+    
+  </channel>
+</rss>

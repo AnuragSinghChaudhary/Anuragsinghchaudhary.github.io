@@ -80,6 +80,15 @@
     </item>
     
     <item>
+      <title>A Practical Repository of NLP Learning Directions</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/repository-of-natural-language-processing/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/repository-of-natural-language-processing/</guid>
+      <description>A refreshed legacy guide to the major areas inside natural language processing and how to think about learning them.</description>
+    </item>
+    
+    <item>
       <title>Seven Steps of a Machine Learning Project</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
@@ -95,6 +104,15 @@
       
       <guid>https://AnuragSinghChaudhary.github.io/blog/nltk-and-natural-language-processing-in-python/</guid>
       <description>A refreshed legacy introduction to natural language processing concepts and how NLTK helps beginners work with text.</description>
+    </item>
+    
+    <item>
+      <title>Data Science Resources I Still Recommend</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</link>
+      <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</guid>
+      <description>A refreshed legacy resource guide for learning data science through better tools, documentation, and project habits.</description>
     </item>
     
   </channel>

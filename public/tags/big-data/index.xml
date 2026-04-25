@@ -16,5 +16,14 @@
       <description>A refreshed legacy explainer on consistency, availability, and partition tolerance in distributed systems.</description>
     </item>
     
+    <item>
+      <title>Spark Standalone Mode Explained</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/spark-standalone-mode-explained/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/spark-standalone-mode-explained/</guid>
+      <description>A refreshed legacy introduction to Spark standalone mode and why it remains useful for testing, learning, and simple cluster setups.</description>
+    </item>
+    
   </channel>
 </rss>

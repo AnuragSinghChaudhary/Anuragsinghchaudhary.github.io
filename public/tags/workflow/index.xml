@@ -16,5 +16,14 @@
       <description>A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction.</description>
     </item>
     
+    <item>
+      <title>Data Processing Command-Line Tools</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/data-processing-command-line-tools/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/data-processing-command-line-tools/</guid>
+      <description>A refreshed legacy guide to why command-line tools still matter for quick data inspection, transformation, and workflow speed.</description>
+    </item>
+    
   </channel>
 </rss>

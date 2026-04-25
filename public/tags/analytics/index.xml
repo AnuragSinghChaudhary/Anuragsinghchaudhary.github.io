@@ -26,12 +26,39 @@
     </item>
     
     <item>
+      <title>Simple Data Visualization Tools</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/simple-data-visualization-tools/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/simple-data-visualization-tools/</guid>
+      <description>A refreshed legacy guide to choosing approachable visualization tools before jumping into complex dashboard or custom charting stacks.</description>
+    </item>
+    
+    <item>
       <title>From Google Data Studio to Looker Studio</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/from-google-data-studio-to-looker-studio/</link>
       <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://AnuragSinghChaudhary.github.io/blog/from-google-data-studio-to-looker-studio/</guid>
       <description>A refreshed legacy dashboarding article on how Google’s reporting tool evolved into Looker Studio and why it still matters.</description>
+    </item>
+    
+    <item>
+      <title>Data Processing Command-Line Tools</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/data-processing-command-line-tools/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/data-processing-command-line-tools/</guid>
+      <description>A refreshed legacy guide to why command-line tools still matter for quick data inspection, transformation, and workflow speed.</description>
+    </item>
+    
+    <item>
+      <title>Data Science Resources I Still Recommend</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</link>
+      <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</guid>
+      <description>A refreshed legacy resource guide for learning data science through better tools, documentation, and project habits.</description>
     </item>
     
   </channel>

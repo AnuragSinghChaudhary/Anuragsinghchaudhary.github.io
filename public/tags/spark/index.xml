@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Spark on Anurag Chaudhary</title>
+    <link>https://AnuragSinghChaudhary.github.io/tags/spark/</link>
+    <description>Recent content in Spark on Anurag Chaudhary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Sep 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/spark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spark Standalone Mode Explained</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/spark-standalone-mode-explained/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/spark-standalone-mode-explained/</guid>
+      <description>A refreshed legacy introduction to Spark standalone mode and why it remains useful for testing, learning, and simple cluster setups.</description>
+    </item>
+    
+  </channel>
+</rss>

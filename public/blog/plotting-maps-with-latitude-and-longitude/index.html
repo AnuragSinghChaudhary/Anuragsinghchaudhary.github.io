@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Plotting Maps with Latitude and Longitude | Anurag Chaudhary</title>
+<meta name="keywords" content="Geospatial, Maps, Visualization, Latitude, Longitude">
+<meta name="description" content="A refreshed legacy introduction to map-based visualization using coordinate data, geospatial formats, and interactive mapping tools.">
+<meta name="author" content="">
+<link rel="canonical" href="https://AnuragSinghChaudhary.github.io/blog/plotting-maps-with-latitude-and-longitude/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.296af7cf9237b6b7ac9414e14faee9a2d1423e2794fb24bebbe524dbda37e86d.css" integrity="sha256-KWr3z5I3treslBThT67potFCPieU&#43;yS&#43;u&#43;Uk29o36G0=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.2eadbb982468c11a433a3e291f01326f2ba43f065e256bf792dbd79640a92316.js" integrity="sha256-Lq27mCRowRpDOj4pHwEybyukPwZeJWv3ktvXlkCpIxY="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://AnuragSinghChaudhary.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://AnuragSinghChaudhary.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://AnuragSinghChaudhary.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://AnuragSinghChaudhary.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://AnuragSinghChaudhary.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://AnuragSinghChaudhary.github.io/blog/plotting-maps-with-latitude-and-longitude/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="Plotting Maps with Latitude and Longitude" />
+<meta property="og:description" content="A refreshed legacy introduction to map-based visualization using coordinate data, geospatial formats, and interactive mapping tools." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AnuragSinghChaudhary.github.io/blog/plotting-maps-with-latitude-and-longitude/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2019-03-20T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2019-03-20T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Plotting Maps with Latitude and Longitude"/>
+<meta name="twitter:description" content="A refreshed legacy introduction to map-based visualization using coordinate data, geospatial formats, and interactive mapping tools."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Blogs",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Plotting Maps with Latitude and Longitude",
+      "item": "https://AnuragSinghChaudhary.github.io/blog/plotting-maps-with-latitude-and-longitude/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Plotting Maps with Latitude and Longitude",
+  "name": "Plotting Maps with Latitude and Longitude",
+  "description": "A refreshed legacy introduction to map-based visualization using coordinate data, geospatial formats, and interactive mapping tools.",
+  "keywords": [
+    "Geospatial", "Maps", "Visualization", "Latitude", "Longitude"
+  ],
+  "articleBody": " Editor’s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.\nOnce a dataset contains latitude and longitude, it stops being just a table. It becomes spatial.\nThat shift matters because location adds a new layer of interpretation. A number is one thing in a spreadsheet, but once you place it on a map, clusters, gaps, routes, and patterns become much easier to notice. 🗺️\nWhy coordinate data matters Latitude and longitude let you answer questions that ordinary charts often hide:\nwhere are events concentrated? where are the gaps in coverage? how do routes move through space? what changes across neighborhoods or regions? This is why map-based analysis becomes so useful in logistics, transit, air quality, delivery systems, public services, and civic data.\nCommon formats you run into When working with map data, a few formats appear repeatedly:\nraw latitude and longitude pairs GeoJSON TopoJSON shapefiles Understanding how these differ helps a lot when moving from a dataset to an actual visualization.\nCommon map patterns Different spatial questions lead to different visual forms:\npoint maps for events or sensors choropleths for aggregated regional values route maps for movement or transit heatmaps for density or intensity The important thing is not the visual style itself. It is matching the style to the question.\nWhy map design can go wrong Maps are powerful, but they are also easy to misuse.\nCommon problems include:\nplotting too many points without aggregation using poor basemaps or too much visual clutter mixing inaccurate coordinates with strong conclusions forgetting that area and density are not the same thing So the map is not the analysis. It is part of the analysis.\nWhy this topic still fits my site I have stayed interested in mapping and geospatial thinking because it sits naturally beside transport data, environmental monitoring, and public-interest analytics.\nMany real-world systems are spatial systems. Once you see that clearly, location stops being a decorative feature and starts becoming part of the logic of the product.\nFinal thought Plotting coordinates on a map is often the first step toward seeing a system differently.\nThat is why maps remain one of the most useful forms of exploratory visualization. 📍\n",
+  "wordCount" : "372",
+  "inLanguage": "en",
+  "datePublished": "2019-03-20T00:00:00Z",
+  "dateModified": "2019-03-20T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://AnuragSinghChaudhary.github.io/blog/plotting-maps-with-latitude-and-longitude/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Anurag Chaudhary",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://AnuragSinghChaudhary.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header sticky-header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://AnuragSinghChaudhary.github.io/" accesskey="h" title="Anurag Chaudhary (Alt + H)">Anurag Chaudhary</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/experience" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/blog" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://AnuragSinghChaudhary.github.io/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://AnuragSinghChaudhary.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://AnuragSinghChaudhary.github.io/blog/">Blogs</a></div>
+    <h1 class="post-title">
+      Plotting Maps with Latitude and Longitude
+    </h1>
+    <div class="post-description">
+      A refreshed legacy introduction to map-based visualization using coordinate data, geospatial formats, and interactive mapping tools.
+    </div>
+    <div class="post-meta">
+
+
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">‎ Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#why-coordinate-data-matters" aria-label="Why coordinate data matters">Why coordinate data matters</a></li>
+                <li>
+                    <a href="#common-formats-you-run-into" aria-label="Common formats you run into">Common formats you run into</a></li>
+                <li>
+                    <a href="#common-map-patterns" aria-label="Common map patterns">Common map patterns</a></li>
+                <li>
+                    <a href="#why-map-design-can-go-wrong" aria-label="Why map design can go wrong">Why map design can go wrong</a></li>
+                <li>
+                    <a href="#why-this-topic-still-fits-my-site" aria-label="Why this topic still fits my site">Why this topic still fits my site</a></li>
+                <li>
+                    <a href="#final-thought" aria-label="Final thought">Final thought</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><blockquote>
+<p>Editor&rsquo;s note: this article is based on an older post from my WordPress archive and has been rewritten for my current portfolio.</p>
+</blockquote>
+<p>Once a dataset contains latitude and longitude, it stops being just a table. It becomes spatial.</p>
+<p>That shift matters because location adds a new layer of interpretation. A number is one thing in a spreadsheet, but once you place it on a map, clusters, gaps, routes, and patterns become much easier to notice. 🗺️</p>
+<h2 id="why-coordinate-data-matters">Why coordinate data matters<a hidden class="anchor" aria-hidden="true" href="#why-coordinate-data-matters">#</a></h2>
+<p>Latitude and longitude let you answer questions that ordinary charts often hide:</p>
+<ul>
+<li>where are events concentrated?</li>
+<li>where are the gaps in coverage?</li>
+<li>how do routes move through space?</li>
+<li>what changes across neighborhoods or regions?</li>
+</ul>
+<p>This is why map-based analysis becomes so useful in logistics, transit, air quality, delivery systems, public services, and civic data.</p>
+<h2 id="common-formats-you-run-into">Common formats you run into<a hidden class="anchor" aria-hidden="true" href="#common-formats-you-run-into">#</a></h2>
+<p>When working with map data, a few formats appear repeatedly:</p>
+<ul>
+<li>raw latitude and longitude pairs</li>
+<li>GeoJSON</li>
+<li>TopoJSON</li>
+<li>shapefiles</li>
+</ul>
+<p>Understanding how these differ helps a lot when moving from a dataset to an actual visualization.</p>
+<h2 id="common-map-patterns">Common map patterns<a hidden class="anchor" aria-hidden="true" href="#common-map-patterns">#</a></h2>
+<p>Different spatial questions lead to different visual forms:</p>
+<ul>
+<li>point maps for events or sensors</li>
+<li>choropleths for aggregated regional values</li>
+<li>route maps for movement or transit</li>
+<li>heatmaps for density or intensity</li>
+</ul>
+<p>The important thing is not the visual style itself. It is matching the style to the question.</p>
+<h2 id="why-map-design-can-go-wrong">Why map design can go wrong<a hidden class="anchor" aria-hidden="true" href="#why-map-design-can-go-wrong">#</a></h2>
+<p>Maps are powerful, but they are also easy to misuse.</p>
+<p>Common problems include:</p>
+<ul>
+<li>plotting too many points without aggregation</li>
+<li>using poor basemaps or too much visual clutter</li>
+<li>mixing inaccurate coordinates with strong conclusions</li>
+<li>forgetting that area and density are not the same thing</li>
+</ul>
+<p>So the map is not the analysis. It is part of the analysis.</p>
+<h2 id="why-this-topic-still-fits-my-site">Why this topic still fits my site<a hidden class="anchor" aria-hidden="true" href="#why-this-topic-still-fits-my-site">#</a></h2>
+<p>I have stayed interested in mapping and geospatial thinking because it sits naturally beside transport data, environmental monitoring, and public-interest analytics.</p>
+<p>Many real-world systems are spatial systems. Once you see that clearly, location stops being a decorative feature and starts becoming part of the logic of the product.</p>
+<h2 id="final-thought">Final thought<a hidden class="anchor" aria-hidden="true" href="#final-thought">#</a></h2>
+<p>Plotting coordinates on a map is often the first step toward seeing a system differently.</p>
+<p>That is why maps remain one of the most useful forms of exploratory visualization. 📍</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/geospatial/">Geospatial</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/maps/">Maps</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/visualization/">Visualization</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/latitude/">Latitude</a></li>
+      <li><a href="https://AnuragSinghChaudhary.github.io/tags/longitude/">Longitude</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2026 <a href="https://AnuragSinghChaudhary.github.io/">Anurag Chaudhary</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

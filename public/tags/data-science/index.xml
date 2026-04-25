@@ -34,5 +34,14 @@
       <description>A refreshed legacy guide to what notebooks are, how the IPython Notebook evolved into Jupyter, and why notebooks still matter.</description>
     </item>
     
+    <item>
+      <title>Data Science Resources I Still Recommend</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</link>
+      <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</guid>
+      <description>A refreshed legacy resource guide for learning data science through better tools, documentation, and project habits.</description>
+    </item>
+    
   </channel>
 </rss>

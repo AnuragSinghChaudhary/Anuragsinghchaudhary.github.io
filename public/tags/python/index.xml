@@ -6,7 +6,7 @@
     <description>Recent content in Python on Anurag Chaudhary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automated Image Captioning (Bachelor Thesis)</title>
       <link>https://AnuragSinghChaudhary.github.io/projects/automated-image-captioning/</link>
@@ -68,6 +68,15 @@
       
       <guid>https://AnuragSinghChaudhary.github.io/experience/16bit/</guid>
       <description>JunoTerra | New Delhi, India 🇮🇳</description>
+    </item>
+    
+    <item>
+      <title>Using Multiple Python Environments in Jupyter</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/multiple-python-environments-in-jupyter/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/multiple-python-environments-in-jupyter/</guid>
+      <description>A refreshed legacy guide to how Jupyter kernels make it possible to work with more than one Python environment.</description>
     </item>
     
     <item>

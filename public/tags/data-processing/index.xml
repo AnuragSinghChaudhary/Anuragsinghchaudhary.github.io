@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data Processing on Anurag Chaudhary</title>
+    <link>https://AnuragSinghChaudhary.github.io/tags/data-processing/</link>
+    <description>Recent content in Data Processing on Anurag Chaudhary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/data-processing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Processing Command-Line Tools</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/data-processing-command-line-tools/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/data-processing-command-line-tools/</guid>
+      <description>A refreshed legacy guide to why command-line tools still matter for quick data inspection, transformation, and workflow speed.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -44,6 +44,24 @@
     </item>
     
     <item>
+      <title>A Practical Repository of NLP Learning Directions</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/repository-of-natural-language-processing/</link>
+      <pubDate>Mon, 17 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/repository-of-natural-language-processing/</guid>
+      <description>A refreshed legacy guide to the major areas inside natural language processing and how to think about learning them.</description>
+    </item>
+    
+    <item>
+      <title>Using Multiple Python Environments in Jupyter</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/multiple-python-environments-in-jupyter/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/multiple-python-environments-in-jupyter/</guid>
+      <description>A refreshed legacy guide to how Jupyter kernels make it possible to work with more than one Python environment.</description>
+    </item>
+    
+    <item>
       <title>What Is GTFS?</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/what-is-gtfs/</link>
       <pubDate>Sat, 18 May 2019 00:00:00 +0000</pubDate>
@@ -53,12 +71,30 @@
     </item>
     
     <item>
+      <title>Plotting Maps with Latitude and Longitude</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/plotting-maps-with-latitude-and-longitude/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/plotting-maps-with-latitude-and-longitude/</guid>
+      <description>A refreshed legacy introduction to map-based visualization using coordinate data, geospatial formats, and interactive mapping tools.</description>
+    </item>
+    
+    <item>
       <title>Seven Steps of a Machine Learning Project</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://AnuragSinghChaudhary.github.io/blog/seven-steps-of-machine-learning/</guid>
       <description>A refreshed legacy guide to the main stages of a machine learning workflow, from data collection to prediction.</description>
+    </item>
+    
+    <item>
+      <title>Simple Data Visualization Tools</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/simple-data-visualization-tools/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/simple-data-visualization-tools/</guid>
+      <description>A refreshed legacy guide to choosing approachable visualization tools before jumping into complex dashboard or custom charting stacks.</description>
     </item>
     
     <item>
@@ -80,6 +116,15 @@
     </item>
     
     <item>
+      <title>Data Processing Command-Line Tools</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/data-processing-command-line-tools/</link>
+      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/data-processing-command-line-tools/</guid>
+      <description>A refreshed legacy guide to why command-line tools still matter for quick data inspection, transformation, and workflow speed.</description>
+    </item>
+    
+    <item>
       <title>CAP Theorem Explained</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/cap-theorem-explained/</link>
       <pubDate>Fri, 11 Nov 2016 00:00:00 +0000</pubDate>
@@ -98,6 +143,15 @@
     </item>
     
     <item>
+      <title>Spark Standalone Mode Explained</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/spark-standalone-mode-explained/</link>
+      <pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/spark-standalone-mode-explained/</guid>
+      <description>A refreshed legacy introduction to Spark standalone mode and why it remains useful for testing, learning, and simple cluster setups.</description>
+    </item>
+    
+    <item>
       <title>From IPython Notebook to Jupyter</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/from-ipython-notebook-to-jupyter/</link>
       <pubDate>Sat, 16 Jul 2016 00:00:00 +0000</pubDate>
@@ -113,6 +167,15 @@
       
       <guid>https://AnuragSinghChaudhary.github.io/blog/public-datasets-for-data-analysis/</guid>
       <description>A refreshed legacy resource guide to useful public datasets for analytics, machine learning, economics, health, and open data projects.</description>
+    </item>
+    
+    <item>
+      <title>Data Science Resources I Still Recommend</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</link>
+      <pubDate>Mon, 04 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/data-science-resources/</guid>
+      <description>A refreshed legacy resource guide for learning data science through better tools, documentation, and project habits.</description>
     </item>
     
   </channel>

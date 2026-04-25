@@ -6,7 +6,25 @@
     <description>Recent content in Visualization on Anurag Chaudhary</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Plotting Maps with Latitude and Longitude</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/plotting-maps-with-latitude-and-longitude/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/plotting-maps-with-latitude-and-longitude/</guid>
+      <description>A refreshed legacy introduction to map-based visualization using coordinate data, geospatial formats, and interactive mapping tools.</description>
+    </item>
+    
+    <item>
+      <title>Simple Data Visualization Tools</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/simple-data-visualization-tools/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/simple-data-visualization-tools/</guid>
+      <description>A refreshed legacy guide to choosing approachable visualization tools before jumping into complex dashboard or custom charting stacks.</description>
+    </item>
+    
     <item>
       <title>Python Libraries for Data Science</title>
       <link>https://AnuragSinghChaudhary.github.io/blog/python-libraries-for-data-science/</link>

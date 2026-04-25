@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Environments on Anurag Chaudhary</title>
+    <link>https://AnuragSinghChaudhary.github.io/tags/environments/</link>
+    <description>Recent content in Environments on Anurag Chaudhary</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jun 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://AnuragSinghChaudhary.github.io/tags/environments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Multiple Python Environments in Jupyter</title>
+      <link>https://AnuragSinghChaudhary.github.io/blog/multiple-python-environments-in-jupyter/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://AnuragSinghChaudhary.github.io/blog/multiple-python-environments-in-jupyter/</guid>
+      <description>A refreshed legacy guide to how Jupyter kernels make it possible to work with more than one Python environment.</description>
+    </item>
+    
+  </channel>
+</rss>
